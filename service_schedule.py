@@ -73,15 +73,15 @@ def prepare_records(original_rows, tagged_rows):
 
 
 class BookingTool:
-    def __init__(self, records, slots):
-        if not slots or len({slot.slot_id for slot in slots}) != len(slots):
-            raise ValueError("Missing inventory or duplicate slot IDs")
+    def __init__(self, records, slots, *, week_start=None):
+        if len({slot.slot_id for slot in slots}) != len(slots):
+            raise ValueError("Duplicate slot IDs")
         self.records = records
         self.slots = sorted((slot for slot in slots if slot.status == "open"),
                             key=lambda slot: (slot.slot_date, slot.slot_start_time, slot.slot_id))
-        if not self.slots:
+        if not self.slots and week_start is None:
             raise ValueError("Inventory has no open slots")
-        self.first_day = self.slots[0].slot_date
+        self.first_day = week_start or self.slots[0].slot_date
         self.reserved = {}
 
     def book_service_slot(self, call):

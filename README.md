@@ -74,3 +74,16 @@ python service_schedule.py \
 ```
 
 Use the `OPENROUTER_API_KEY` environment variable from Stage 2. Reuse the same inputs and checkpoint to resume. Safety demand exceeding Monday's capacity is escalated immediately and reserves the earliest available priority bay later in the week. Remote demand exceeding compatible capacity stays in the advisor queue.
+
+## Stage 4 · Morning fault queue
+
+```sh
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+The page reads the 300 exercise records with their sanitized technical summaries, tag, fix path, slot, and review status. It sorts by urgency, then actual received order and exercise ID. `queue_data.py` derives the published data from the local original message file, the schedule, and the open inventory. The raw files and exact message receipt timestamps stay local.
+
+The paste box applies the same safety principles and Pydantic constraints locally, then runs the same booking function against a fresh copy of remaining slots. The test result enters the main queue at its sorted position and is identified as a preview. It does not reserve a published slot or change the 300 original rows.
+
+In the acceptance exercise, MSG-10309 lands at position 106, between the older safety cases and the first `soon` case. Extra pedal travel and grinding while stopping require priority safety inspection. The next unused compatible slot is SLOT-0291, 20 November at 15:00, with escalation because the first day is full. The stage's 18 acceptance cases matched their reviewed safety flags after local checks. These fixtures establish behavior for the exercise.
