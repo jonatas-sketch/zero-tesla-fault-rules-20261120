@@ -45,4 +45,10 @@ python classify_batch.py /path/to/technical-input.csv /path/to/result.csv \
   --provider openrouter --model particle-ai/particle-1:free --external-approved
 ```
 
-This path makes one request per record, retries transient failures for that record, and checkpoints completed decisions next to the output. Repeat the same command to resume after an interruption. A successful synthetic brake-pedal case verified access with a free OpenRouter model. The annotated subset can measure recall for reviewed positives. Use human review on safety classifications.
+This path makes one request per record, retries transient failures for that record, and checkpoints completed decisions next to the output. Repeat the same command to resume after an interruption. The default configuration permits only free fallback models and records the model that served every result. A synthetic brake-pedal case verified access. The annotated subset can measure recall for reviewed positives.
+
+```sh
+python verify_results.py /path/to/course-input.csv /path/to/result.csv tagged-fault-messages.csv
+```
+
+The verification step checks all 300 message IDs, urgency and path consistency, safety codes and review flags. Its export contains the exercise IDs and decisions. The course input, minimized input and model receipts stay local. Use human review on safety classifications.

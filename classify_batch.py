@@ -28,13 +28,15 @@ account or screen settings. Flag cut-off reports with unclear safety evidence fo
 manual review. When only standardized symptoms are provided, strong cues such as
 grinding while braking, steering assist loss or sideways pull while slowing justify
 priority_safety_inspection. Treat a generic braking or steering mention without a
-concrete impairment as uncertain and flag it for human review. Return only the
-requested path and flag for each index."""
+concrete impairment as uncertain and flag it for human review. Return a JSON object
+with exactly the keys fix_path (one allowed value) and needs_human_review (a boolean).
+In batch mode use one decision per index."""
 
 
 class Decision(FaultUrgencyRule):
     index: int
     needs_human_review: bool
+    model_used: str | None = None
 
 
 class Candidate(BaseModel):
@@ -54,6 +56,11 @@ class Batch(BaseModel):
 
 URGENCY_BY_PATH = {path: urgency for urgency, paths in ALLOWED_PATHS.items() for path in paths}
 FREE_MODEL = "particle-ai/particle-1:free"
+FREE_FALLBACKS = [
+    "google/gemma-4-31b-it:free",
+    "google/gemma-4-26b-a4b-it:free",
+    "recursive/flint-v1.0:free",
+]
 
 
 class RetryableInferenceError(RuntimeError):
@@ -88,12 +95,12 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
         headers["Authorization"] = f"Bearer {key}"
         data.update(
             temperature=0,
-            max_tokens=160,
-            reasoning={"effort": "none", "exclude": True},
-            response_format={"type": "json_schema", "json_schema": {
-                "name": "fault_decision", "strict": True, "schema": schema,
-            }},
+            max_tokens=768,
+            provider={"max_price": {"prompt": 0, "completion": 0}},
+            response_format={"type": "json_object"},
         )
+        if model == FREE_MODEL:
+            data["models"] = FREE_FALLBACKS
 
     req = Request(url, json.dumps(data).encode(), headers=headers, method="POST")
     try:
@@ -106,7 +113,17 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
             raise RetryableInferenceError(f"HTTP {err.code}", wait_seconds) from None
         suffix = f"; retry after {wait_seconds} seconds" if wait_seconds else ""
         raise RuntimeError(f"Inference failed with HTTP {err.code}{suffix}") from None
-    content = result["message"]["content"] if provider == "ollama" else result["choices"][0]["message"]["content"]
+    if provider == "ollama":
+        content = result["message"]["content"]
+        model_used = None
+    else:
+        choices = result.get("choices") or []
+        content = choices[0].get("message", {}).get("content") if choices else None
+        model_used = result.get("model")
+        if not isinstance(content, str) or not model_used:
+            raise RetryableInferenceError("missing response")
+        if not model_used.endswith(":free"):
+            raise ValueError("Unexpected non-free OpenRouter model in the response")
     if single:
         candidates = [Candidate.model_validate_json(content)]
     else:
@@ -119,6 +136,7 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
         urgency_tag=URGENCY_BY_PATH[d.fix_path],
         fix_path=d.fix_path,
         needs_human_review=d.needs_human_review or d.fix_path == FixPath.PRIORITY_SAFETY_INSPECTION,
+        model_used=model_used,
     ) for i, d in enumerate(candidates)]
 
 
@@ -145,8 +163,9 @@ def infer(rows: list[dict], provider: str, model: str) -> list[Decision]:
         return infer(rows[:midpoint], provider, model) + infer(rows[midpoint:], provider, model)
 
 
-def urgent(index: int) -> Decision:
-    return Decision(index=index, urgency_tag="safety_urgent", fix_path="priority_safety_inspection", needs_human_review=True)
+def urgent(index: int, model_used: str | None = None) -> Decision:
+    return Decision(index=index, urgency_tag="safety_urgent", fix_path="priority_safety_inspection",
+                    needs_human_review=True, model_used=model_used)
 
 
 def classify(rows: list[dict], provider: str, model: str, size: int, *, existing=None, checkpoint=None, request_interval=0.0) -> list[dict]:
@@ -163,8 +182,8 @@ def classify(rows: list[dict], provider: str, model: str, size: int, *, existing
         for i, row in enumerate(section):
             is_urgent = row["vehicle_alert_code"] in SAFETY_ALERT_CODES
             candidate = next(inferred) if provider == "openrouter" or not is_urgent else None
-            decision = urgent(i) if is_urgent else candidate
-            fields = decision.model_dump(mode="json", exclude={"index"})
+            decision = urgent(i, candidate.model_used if candidate else None) if is_urgent else candidate
+            fields = decision.model_dump(mode="json", exclude={"index"}, exclude_none=True)
             result.append({"message_id": row["message_id"], **fields})
         if checkpoint is not None:
             checkpoint(result)
@@ -211,6 +230,7 @@ def main():
             if checkpoint_data["config"] != config or [row["message_id"] for row in existing] != ids[:len(existing)]:
                 parser.error("checkpoint does not match the input or inference settings")
             for record in existing:
+                record.setdefault("model_used", model)
                 Decision.model_validate({"index": 0, **{k: v for k, v in record.items() if k != "message_id"}})
 
         def save_checkpoint(records):

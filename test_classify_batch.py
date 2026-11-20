@@ -26,6 +26,7 @@ class ExternalClassificationTest(unittest.TestCase):
         decision = {"fix_path": "routine_service_visit", "needs_human_review": False}
         good_response = io.BytesIO(json.dumps({
             "choices": [{"message": {"content": json.dumps(decision)}}],
+            "model": FREE_MODEL,
         }).encode())
         quota_error = HTTPError("https://openrouter.ai/api/v1/chat/completions", 429, "", {"Retry-After": "1"}, None)
         snapshots = []
@@ -46,6 +47,7 @@ class ExternalClassificationTest(unittest.TestCase):
             self.assertNotIn("ABC123", content["description"])
             self.assertNotIn("private-row-id", json.dumps(content))
         self.assertEqual(result[0]["urgency_tag"], "safety_urgent")
+        self.assertEqual(result[0]["model_used"], FREE_MODEL)
         self.assertEqual(snapshots, [result])
         with patch("classify_batch.urlopen") as request:
             self.assertEqual(classify([reduced], "openrouter", FREE_MODEL, 1, existing=result), result)
