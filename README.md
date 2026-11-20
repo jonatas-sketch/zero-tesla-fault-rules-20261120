@@ -42,7 +42,7 @@ set -a
 . ./.env
 set +a
 python classify_batch.py /path/to/technical-input.csv /path/to/result.csv \
-  --provider openrouter --model openrouter/free --external-approved
+  --provider openrouter --model particle-ai/particle-1:free --external-approved
 ```
 
-This path makes one request per record and checkpoints completed decisions next to the output. Repeat the same command to resume after an interruption. A successful synthetic brake-pedal case verified access with a free OpenRouter model. The annotated subset can measure recall for reviewed positives. Use human review on safety classifications.
+This path makes one request per record, retries transient failures for that record, and checkpoints completed decisions next to the output. Repeat the same command to resume after an interruption. A successful synthetic brake-pedal case verified access with a free OpenRouter model. The annotated subset can measure recall for reviewed positives. Use human review on safety classifications.

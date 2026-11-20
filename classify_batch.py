@@ -8,10 +8,10 @@ import os
 import sys
 from pathlib import Path
 from time import monotonic, sleep
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict, ValidationError
 
 from fault_urgency_rules import ALLOWED_PATHS, FixPath, FaultUrgencyRule, SAFETY_ALERT_CODES
 
@@ -38,6 +38,8 @@ class Decision(FaultUrgencyRule):
 
 
 class Candidate(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     fix_path: FixPath
     needs_human_review: bool
 
@@ -51,6 +53,13 @@ class Batch(BaseModel):
 
 
 URGENCY_BY_PATH = {path: urgency for urgency, paths in ALLOWED_PATHS.items() for path in paths}
+FREE_MODEL = "particle-ai/particle-1:free"
+
+
+class RetryableInferenceError(RuntimeError):
+    def __init__(self, detail: str, wait_seconds: int = 0):
+        super().__init__(detail)
+        self.wait_seconds = wait_seconds
 
 
 def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision]:
@@ -77,17 +86,25 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
             raise ValueError("Select a free OpenRouter model")
         url = "https://openrouter.ai/api/v1/chat/completions"
         headers["Authorization"] = f"Bearer {key}"
-        data.update(temperature=0, response_format={"type": "json_schema", "json_schema": {
-            "name": "fault_decision", "strict": True, "schema": schema,
-        }})
+        data.update(
+            temperature=0,
+            max_tokens=160,
+            reasoning={"effort": "none", "exclude": True},
+            response_format={"type": "json_schema", "json_schema": {
+                "name": "fault_decision", "strict": True, "schema": schema,
+            }},
+        )
 
     req = Request(url, json.dumps(data).encode(), headers=headers, method="POST")
     try:
-        with urlopen(req, timeout=180) as response:
+        with urlopen(req, timeout=45 if provider == "openrouter" else 180) as response:
             result = json.load(response)
     except HTTPError as err:
         limit = err.headers.get("Retry-After")
-        suffix = f"; retry after {limit} seconds" if limit and limit.isdecimal() else ""
+        wait_seconds = int(limit or 0) if (limit or "").isdecimal() else 0
+        if err.code in (408, 429, 500, 502, 503, 504) and wait_seconds <= 60:
+            raise RetryableInferenceError(f"HTTP {err.code}", wait_seconds) from None
+        suffix = f"; retry after {wait_seconds} seconds" if wait_seconds else ""
         raise RuntimeError(f"Inference failed with HTTP {err.code}{suffix}") from None
     content = result["message"]["content"] if provider == "ollama" else result["choices"][0]["message"]["content"]
     if single:
@@ -108,6 +125,17 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
 def infer(rows: list[dict], provider: str, model: str) -> list[Decision]:
     if not rows:
         return []
+    if provider == "openrouter":
+        for attempt, delay in enumerate((5, 10, 20, 40, 0)):
+            try:
+                return classify_chunk(rows, provider, model)
+            except (RetryableInferenceError, TimeoutError, URLError, ValidationError) as error:
+                detail = str(error) if isinstance(error, RetryableInferenceError) else type(error).__name__
+                if not delay:
+                    raise RuntimeError(f"Unable to obtain a valid OpenRouter decision ({detail})") from None
+                wait_seconds = max(delay, getattr(error, "wait_seconds", 0))
+                print(f"OpenRouter retry {attempt + 1} ({detail}) in {wait_seconds}s", file=sys.stderr, flush=True)
+                sleep(wait_seconds)
     try:
         return classify_chunk(rows, provider, model)
     except ValueError:
@@ -167,7 +195,7 @@ def main():
         parser.error("batch size must be between 1 and 30")
     if args.provider == "openrouter" and size != 1:
         parser.error("The OpenRouter path uses one request per report for this assignment")
-    model = args.model or ("qwen2.5:3b" if args.provider == "ollama" else "openrouter/free")
+    model = args.model or ("qwen2.5:3b" if args.provider == "ollama" else FREE_MODEL)
     with args.input.open(encoding="utf-8-sig", newline="") as source:
         rows = list(csv.DictReader(source))
     ids = [r["message_id"] for r in rows]
