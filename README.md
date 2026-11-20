@@ -51,4 +51,10 @@ This path makes one request per record, starts requests at a shared rate, and ch
 python verify_results.py /path/to/course-input.csv /path/to/result.csv tagged-fault-messages.csv
 ```
 
-The verification step checks all 300 message IDs, urgency and path consistency, safety codes and review flags. Its export contains the exercise IDs and decisions. The course input, minimized input and model receipts stay local. Use human review on safety classifications.
+The verification step checks all 300 message IDs, urgency and path consistency, safety codes and review flags. It applies a local safety recheck to concrete evidence that the projection can miss, such as a grinding brake pedal or a wobbling steering wheel. It reports model results and any overrides separately. Its export contains the exercise IDs and final decisions. The course input, minimized input and model receipts stay local. Use human review on safety classifications.
+
+### Overnight batch results
+
+The free OpenRouter run produced 300 validated decisions. The initial model and alert-code checks detected 53 of 60 reviewed safety faults. The local safety review promoted 8 additional cases with concrete symptoms in the original text. One remaining miss, heavy steering that catches at low speed, prompted the final recheck rule. The exported queue covers 60 of 60 reviewed positives after review on this batch. That comparison measures recall on reviewed positives for the initial run and coverage after revision for the export. It does not estimate general accuracy.
+
+The [tagged output](tagged-fault-messages.csv) contains 105 safety-urgent, 66 soon, and 129 routine records. Every safety record is flagged for human review.
