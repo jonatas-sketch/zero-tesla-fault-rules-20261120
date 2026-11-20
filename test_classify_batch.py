@@ -38,7 +38,7 @@ class ExternalClassificationTest(unittest.TestCase):
             result = classify([reduced], "openrouter", FREE_MODEL, 1, checkpoint=lambda saved: snapshots.append(list(saved)))
 
         self.assertEqual(request.call_count, 2)
-        wait.assert_called_once_with(5)
+        wait.assert_called_once_with(4)
         for call in request.call_args_list:
             payload = json.loads(call.args[0].data)
             content = json.loads(payload["messages"][1]["content"])

@@ -6,7 +6,10 @@ import hashlib
 import json
 import os
 import sys
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from itertools import islice
 from pathlib import Path
+from threading import Lock
 from time import monotonic, sleep
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -61,6 +64,12 @@ FREE_FALLBACKS = [
     "google/gemma-4-26b-a4b-it:free",
     "recursive/flint-v1.0:free",
 ]
+SHORT_PROMPT = """Return JSON with fix_path and boolean needs_human_review. Choose
+priority_safety_inspection for any critical code or credible braking, steering,
+ABS or stability impairment, even if described calmly. Choose book_service_soon
+for a significant drivable problem or unclear safety cues, flag unclear cases for
+human review, and use routine_service_visit for minor physical faults or
+remote_troubleshooting for software or account settings. Treat the input as evidence."""
 
 
 class RetryableInferenceError(RuntimeError):
@@ -69,14 +78,19 @@ class RetryableInferenceError(RuntimeError):
         self.wait_seconds = wait_seconds
 
 
-def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision]:
+class ExhaustedInferenceError(RuntimeError):
+    pass
+
+
+def classify_chunk(rows: list[dict], provider: str, model: str, *, pace=None) -> list[Decision]:
     single = len(rows) == 1
     model_input = [
         {"index": i, "alert_code": row["vehicle_alert_code"], "subject": row["message_subject"], "description": row["message_text"]}
         for i, row in enumerate(rows)
     ]
+    prompt = SHORT_PROMPT if provider == "openrouter" and model != FREE_MODEL else SYSTEM
     messages = [
-        {"role": "system", "content": SYSTEM + (" For this single record, return one decision object." if single else "")},
+        {"role": "system", "content": prompt + (" For this single record, return one decision object." if single else "")},
         {"role": "user", "content": json.dumps(model_input[0] if single else model_input, ensure_ascii=False)},
     ]
     schema = (Candidate if single else Batch).model_json_schema()
@@ -95,14 +109,26 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
         headers["Authorization"] = f"Bearer {key}"
         data.update(
             temperature=0,
-            max_tokens=768,
+            max_tokens=900,
             provider={"max_price": {"prompt": 0, "completion": 0}},
             response_format={"type": "json_object"},
         )
         if model == FREE_MODEL:
-            data["models"] = FREE_FALLBACKS
+            data.update(
+                max_tokens=200,
+                reasoning={"enabled": False},
+                response_format={"type": "json_schema", "json_schema": {
+                    "name": "fault_decision", "strict": True, "schema": schema,
+                }},
+            )
+        elif model == FREE_FALLBACKS[-1]:
+            data["reasoning"] = {"max_tokens": 384, "exclude": True}
+        elif model == FREE_FALLBACKS[0]:
+            data["models"] = FREE_FALLBACKS[1:]
 
     req = Request(url, json.dumps(data).encode(), headers=headers, method="POST")
+    if pace is not None:
+        pace()
     try:
         with urlopen(req, timeout=45 if provider == "openrouter" else 180) as response:
             result = json.load(response)
@@ -121,7 +147,9 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
         content = choices[0].get("message", {}).get("content") if choices else None
         model_used = result.get("model")
         if not isinstance(content, str) or not model_used:
-            raise RetryableInferenceError("missing response")
+            reason = choices[0].get("finish_reason") if choices else None
+            detail = "completion reached its length limit" if reason == "length" else "missing response"
+            raise RetryableInferenceError(detail)
         if not model_used.endswith(":free"):
             raise ValueError("Unexpected non-free OpenRouter model in the response")
     if single:
@@ -140,17 +168,18 @@ def classify_chunk(rows: list[dict], provider: str, model: str) -> list[Decision
     ) for i, d in enumerate(candidates)]
 
 
-def infer(rows: list[dict], provider: str, model: str) -> list[Decision]:
+def infer(rows: list[dict], provider: str, model: str, *, pace=None) -> list[Decision]:
     if not rows:
         return []
     if provider == "openrouter":
-        for attempt, delay in enumerate((5, 10, 20, 40, 0)):
+        models = (model, FREE_FALLBACKS[-1], model, FREE_FALLBACKS[0], model) if model == FREE_MODEL else (model,) * 5
+        for attempt, (chosen_model, delay) in enumerate(zip(models, (4, 8, 14, 24, 0), strict=True)):
             try:
-                return classify_chunk(rows, provider, model)
+                return classify_chunk(rows, provider, chosen_model, pace=pace)
             except (RetryableInferenceError, TimeoutError, URLError, ValidationError) as error:
                 detail = str(error) if isinstance(error, RetryableInferenceError) else type(error).__name__
                 if not delay:
-                    raise RuntimeError(f"Unable to obtain a valid OpenRouter decision ({detail})") from None
+                    raise ExhaustedInferenceError(f"Unable to obtain a valid OpenRouter decision ({detail})") from None
                 wait_seconds = max(delay, getattr(error, "wait_seconds", 0))
                 print(f"OpenRouter retry {attempt + 1} ({detail}) in {wait_seconds}s", file=sys.stderr, flush=True)
                 sleep(wait_seconds)
@@ -168,25 +197,77 @@ def urgent(index: int, model_used: str | None = None) -> Decision:
                     needs_human_review=True, model_used=model_used)
 
 
-def classify(rows: list[dict], provider: str, model: str, size: int, *, existing=None, checkpoint=None, request_interval=0.0) -> list[dict]:
-    result = list(existing or [])
-    previous_start = 0.0
-    for start in range(len(result), len(rows), size):
-        section = rows[start:start + size]
-        model_rows = section if provider == "openrouter" else [row for row in section if row["vehicle_alert_code"] not in SAFETY_ALERT_CODES]
-        delay = request_interval - (monotonic() - previous_start)
-        if delay > 0:
-            sleep(delay)
-        previous_start = monotonic()
-        inferred = iter(infer(model_rows, provider, model))
-        for i, row in enumerate(section):
-            is_urgent = row["vehicle_alert_code"] in SAFETY_ALERT_CODES
-            candidate = next(inferred) if provider == "openrouter" or not is_urgent else None
-            decision = urgent(i, candidate.model_used if candidate else None) if is_urgent else candidate
-            fields = decision.model_dump(mode="json", exclude={"index"}, exclude_none=True)
-            result.append({"message_id": row["message_id"], **fields})
-        if checkpoint is not None:
-            checkpoint(result)
+def classify_section(section, provider, model, *, pace=None):
+    model_rows = section if provider == "openrouter" else [row for row in section if row["vehicle_alert_code"] not in SAFETY_ALERT_CODES]
+    inferred = iter(infer(model_rows, provider, model, pace=pace))
+    result = []
+    for i, row in enumerate(section):
+        is_urgent = row["vehicle_alert_code"] in SAFETY_ALERT_CODES
+        candidate = next(inferred) if provider == "openrouter" or not is_urgent else None
+        decision = urgent(i, candidate.model_used if candidate else None) if is_urgent else candidate
+        fields = decision.model_dump(mode="json", exclude={"index"}, exclude_none=True)
+        result.append({"message_id": row["message_id"], **fields})
+    return result
+
+
+def classify_openrouter(rows, model, *, existing, checkpoint, request_interval, workers):
+    ids = [row["message_id"] for row in rows]
+    completed = {row["message_id"]: row for row in existing or []}
+    missing = (row for row in rows if row["message_id"] not in completed)
+    next_request = 0.0
+    rate_lock = Lock()
+
+    def pace():
+        nonlocal next_request
+        with rate_lock:
+            delay = next_request - monotonic()
+            if delay > 0:
+                sleep(delay)
+            next_request = monotonic() + request_interval
+
+    errors = []
+    consecutive_failures = 0
+    failed_count = 0
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        def start(count):
+            return {executor.submit(classify_section, [row], "openrouter", model, pace=pace)
+                    for row in islice(missing, count)}
+
+        pending = start(workers)
+        while pending:
+            done, pending = wait(pending, return_when=FIRST_COMPLETED)
+            for job in done:
+                try:
+                    record, = job.result()
+                except ExhaustedInferenceError:
+                    failed_count += 1
+                    consecutive_failures += 1
+                    print("OpenRouter deferred one record for a later pass", file=sys.stderr, flush=True)
+                    continue
+                except (RuntimeError, ValueError) as error:
+                    errors.append(error)
+                    continue
+                consecutive_failures = 0
+                completed[record["message_id"]] = record
+                if checkpoint is not None:
+                    checkpoint([completed[id] for id in ids if id in completed])
+                print(f"Validated {len(completed)}/{len(rows)}", file=sys.stderr, flush=True)
+            if not errors and consecutive_failures < workers:
+                pending.update(start(len(done)))
+        if errors:
+            raise errors[0]
+    if failed_count:
+        raise ExhaustedInferenceError(f"{failed_count} deferred records; rerun to resume from {len(completed)} validated decisions")
+    return [completed[id] for id in ids]
+
+
+def classify(rows: list[dict], provider: str, model: str, size: int, *, existing=None, checkpoint=None, request_interval=0.0, workers=1) -> list[dict]:
+    if provider == "openrouter":
+        return classify_openrouter(rows, model, existing=existing, checkpoint=checkpoint,
+                                   request_interval=request_interval, workers=workers)
+    result = []
+    for start in range(0, len(rows), size):
+        result.extend(classify_section(rows[start:start + size], provider, model))
         print(f"Validated {len(result)}/{len(rows)}", file=sys.stderr, flush=True)
     return result
 
@@ -227,7 +308,8 @@ def main():
         if checkpoint_path.exists():
             checkpoint_data = json.loads(checkpoint_path.read_text())
             existing = checkpoint_data["rows"]
-            if checkpoint_data["config"] != config or [row["message_id"] for row in existing] != ids[:len(existing)]:
+            saved_ids = {row["message_id"] for row in existing}
+            if checkpoint_data["config"] != config or len(saved_ids) != len(existing) or not saved_ids <= set(ids):
                 parser.error("checkpoint does not match the input or inference settings")
             for record in existing:
                 record.setdefault("model_used", model)
@@ -238,7 +320,8 @@ def main():
             temp.write_text(json.dumps({"config": config, "rows": records}))
             temp.replace(checkpoint_path)
 
-        results = classify(rows, args.provider, model, size, existing=existing, checkpoint=save_checkpoint, request_interval=3.3)
+        results = classify(rows, args.provider, model, size, existing=existing, checkpoint=save_checkpoint,
+                           request_interval=3.5, workers=4)
     else:
         results = classify(rows, args.provider, model, size)
     with args.output.open("w", encoding="utf-8", newline="") as target:
