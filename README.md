@@ -21,3 +21,28 @@ This repository contains a training contract and tests with synthetic examples. 
 python -m pip install -r requirements.txt
 python -m unittest -v
 ```
+
+## Stage 2 · classify the overnight batch
+
+`classify_batch.py` reads the course CSV and writes message ID, urgency, fix path, and the human-review flag. The model recommends a fix path. The code derives the matching urgency, validates the pair and keeps known safety codes in the safety queue. The evaluation columns are read only for the end-of-run comparison with reviewed safety cases.
+
+For local inference, run Ollama on this Mac and pull `qwen2.5:3b`. Keep the input and output CSVs outside the public repository.
+
+```sh
+python classify_batch.py /path/to/course-input.csv /path/to/result.csv
+```
+
+For OpenRouter, supply `OPENROUTER_API_KEY` through the environment. For a fresh setup, copy `.env.example` to `.env` and put the key in that ignored file. Keep the key out of messages, screenshots, and commits.
+
+Convert the course file to a minimized input locally. This projection emits fixed technical phrases and recognized alert codes. It keeps row IDs and review labels for local bookkeeping, while the HTTP payload holds only the generic subject, fixed phrases and the code. The projection may lose context, including nuance in negated or truncated descriptions.
+
+```sh
+python minimize_reports.py /path/to/course-input.csv /path/to/technical-input.csv
+set -a
+. ./.env
+set +a
+python classify_batch.py /path/to/technical-input.csv /path/to/result.csv \
+  --provider openrouter --model openrouter/free --external-approved
+```
+
+This path makes one request per record and checkpoints completed decisions next to the output. Repeat the same command to resume after an interruption. A successful synthetic brake-pedal case verified access with a free OpenRouter model. The annotated subset can measure recall for reviewed positives. Use human review on safety classifications.
