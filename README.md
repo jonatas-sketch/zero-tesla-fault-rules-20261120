@@ -42,7 +42,7 @@ set -a
 . ./.env
 set +a
 python classify_batch.py /path/to/technical-input.csv /path/to/result.csv \
-  --provider openrouter --model particle-ai/particle-1:free --external-approved
+  --provider openrouter --model nvidia/nemotron-3.5-super-vl:free --external-approved
 ```
 
 This path makes one request per record, starts requests at a shared rate, and checkpoints each valid decision next to the output. If a single record exhausts its retries, the program can keep working on others and resume only the missing records on the next run. The default configuration permits only free fallback models and records the model that served every result. A synthetic brake-pedal case verified access. The annotated subset can measure recall for reviewed positives.

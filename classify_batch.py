@@ -31,7 +31,8 @@ account or screen settings. Flag cut-off reports with unclear safety evidence fo
 manual review. When only standardized symptoms are provided, strong cues such as
 grinding while braking, steering assist loss or sideways pull while slowing justify
 priority_safety_inspection. Treat a generic braking or steering mention without a
-concrete impairment as uncertain and flag it for human review. Return a JSON object
+concrete impairment as uncertain and flag it for human review. Use book_service_soon
+when a charging or range issue has no clear software symptoms. Return a JSON object
 with exactly the keys fix_path (one allowed value) and needs_human_review (a boolean).
 In batch mode use one decision per index."""
 
@@ -58,7 +59,8 @@ class Batch(BaseModel):
 
 
 URGENCY_BY_PATH = {path: urgency for urgency, paths in ALLOWED_PATHS.items() for path in paths}
-FREE_MODEL = "particle-ai/particle-1:free"
+FREE_MODEL = "nvidia/nemotron-3.5-super-vl:free"
+PREVIOUS_FREE_MODEL = "particle-ai/particle-1:free"
 FREE_FALLBACKS = [
     "google/gemma-4-31b-it:free",
     "google/gemma-4-26b-a4b-it:free",
@@ -88,7 +90,8 @@ def classify_chunk(rows: list[dict], provider: str, model: str, *, pace=None) ->
         {"index": i, "alert_code": row["vehicle_alert_code"], "subject": row["message_subject"], "description": row["message_text"]}
         for i, row in enumerate(rows)
     ]
-    prompt = SHORT_PROMPT if provider == "openrouter" and model != FREE_MODEL else SYSTEM
+    structured_models = {FREE_MODEL, PREVIOUS_FREE_MODEL}
+    prompt = SHORT_PROMPT if provider == "openrouter" and model not in structured_models else SYSTEM
     messages = [
         {"role": "system", "content": prompt + (" For this single record, return one decision object." if single else "")},
         {"role": "user", "content": json.dumps(model_input[0] if single else model_input, ensure_ascii=False)},
@@ -113,7 +116,7 @@ def classify_chunk(rows: list[dict], provider: str, model: str, *, pace=None) ->
             provider={"max_price": {"prompt": 0, "completion": 0}},
             response_format={"type": "json_object"},
         )
-        if model == FREE_MODEL:
+        if model in structured_models:
             data.update(
                 max_tokens=200,
                 reasoning={"enabled": False},
@@ -172,7 +175,7 @@ def infer(rows: list[dict], provider: str, model: str, *, pace=None) -> list[Dec
     if not rows:
         return []
     if provider == "openrouter":
-        models = (model, FREE_FALLBACKS[-1], model, FREE_FALLBACKS[0], model) if model == FREE_MODEL else (model,) * 5
+        models = (model, PREVIOUS_FREE_MODEL, model, FREE_FALLBACKS[-1], model) if model == FREE_MODEL else (model,) * 5
         for attempt, (chosen_model, delay) in enumerate(zip(models, (4, 8, 14, 24, 0), strict=True)):
             try:
                 return classify_chunk(rows, provider, chosen_model, pace=pace)
@@ -309,10 +312,12 @@ def main():
             checkpoint_data = json.loads(checkpoint_path.read_text())
             existing = checkpoint_data["rows"]
             saved_ids = {row["message_id"] for row in existing}
-            if checkpoint_data["config"] != config or len(saved_ids) != len(existing) or not saved_ids <= set(ids):
+            saved_config = checkpoint_data["config"]
+            previous_run = model == FREE_MODEL and saved_config == {**config, "model": PREVIOUS_FREE_MODEL}
+            if (saved_config != config and not previous_run) or len(saved_ids) != len(existing) or not saved_ids <= set(ids):
                 parser.error("checkpoint does not match the input or inference settings")
             for record in existing:
-                record.setdefault("model_used", model)
+                record.setdefault("model_used", saved_config["model"])
                 Decision.model_validate({"index": 0, **{k: v for k, v in record.items() if k != "message_id"}})
 
         def save_checkpoint(records):
