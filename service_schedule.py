@@ -17,7 +17,7 @@ from pydantic import BaseModel, Field, ValidationError
 from classify_batch import FREE_MODEL, checked_metrics
 from fault_urgency_rules import FixPath, FaultUrgencyRule, UrgencyTag
 from minimize_reports import minimize
-from verify_results import read_csv
+from verify_results import SAFETY_RECHECK, read_csv
 
 
 TOOL_NAME = "book_service_slot"
@@ -25,6 +25,14 @@ RANK = {UrgencyTag.SAFETY_URGENT: 0, UrgencyTag.SOON: 1, UrgencyTag.ROUTINE: 2}
 BAY = "service_center_bay"
 PHYSICAL = {BAY, "mobile_service_visit"}
 REMOTE = {"remote_ota_or_diagnostic", "support_callback"}
+SAFETY_EVIDENCE = {
+    "pulling_while_stopping": "The vehicle pulls to one side while stopping.",
+    "pedal_noise": "Grinding or scraping occurs when the brake pedal is pressed.",
+    "wheel_wobble": "The steering wheel shimmies or wobbles while driving.",
+    "steering_control": "The steering feels unusually heavy or loose.",
+    "persistent_correction": "Repeated steering correction is needed on a flat road.",
+    "pedal_travel": "The brake pedal travels further before the brakes engage.",
+}
 
 
 class Slot(BaseModel):
@@ -208,7 +216,9 @@ def write_safety_report(path, original, baseline, tagged, schedule):
     for row in original:
         prediction = initial_tags[row["message_id"]]["urgency_tag"]
         if row["hand_checked"] == "TRUE" and row["hand_checked_safety_fault"] == "TRUE" and prediction != "safety_urgent":
-            lines.append(f"| {row['message_id']} | {prediction} | safety_urgent | {minimize(row)['message_text']} The local review found braking or steering evidence. |")
+            observed = SAFETY_RECHECK.search(row["message_text"])
+            reason = SAFETY_EVIDENCE.get(observed.lastgroup) if observed else None
+            lines.append(f"| {row['message_id']} | {prediction} | safety_urgent | {reason or minimize(row)['message_text']} |")
     lines.extend(["", "## Booking results", ""])
     lines.extend(f"- {state.replace('_', ' ')} — {count}" for state, count in counts.items())
     lines.extend(f"- Safety overflow on {day} — {count}" for day, count in sorted(overflow.items()))

@@ -13,15 +13,15 @@ from fault_urgency_rules import SAFETY_ALERT_CODES
 
 OUTPUT_FIELDS = ("message_id", "urgency_tag", "fix_path", "needs_human_review")
 SAFETY_RECHECK = re.compile(
-    r"\b(?:car|vehicle) (?:tugs?|pulls?) (?:gently )?(?:to the )?(?:left|right)\b"
+    r"(?P<pulling_while_stopping>\b(?:car|vehicle) (?:tugs?|pulls?) (?:gently )?(?:to the )?(?:left|right)\b"
     r".{0,35}\b(?:when i (?:come to a )?stop|while braking)\b"
-    r"|\bwhen i (?:come to a )?stop\b.{0,35}\bthe car (?:tugs?|pulls?)\b"
-    r"|\bpress the (?:brake )?pedal\b.{0,45}\b(?:grinding feel|scraping)\b"
-    r"|\bsteering wheel (?:starts? to )?(?:shimmy|wobbl\w*)\b"
-    r"|\bsteering(?: wheel)? feels (?:heav(?:y|ier)|loose)\b"
-    r"|\b(?:pulls?|tugs?)\b.{0,45}\b(?:straight.? )?flat road\b"
-    r".{0,80}\b(?:have|need) to keep correcting\b"
-    r"|\bbrake pedal (?:goes|travels)\b.{0,40}\blong before it bites\b",
+    r"|\bwhen i (?:come to a )?stop\b.{0,35}\bthe car (?:tugs?|pulls?)\b)"
+    r"|(?P<pedal_noise>\bpress the (?:brake )?pedal\b.{0,45}\b(?:grinding feel|scraping)\b)"
+    r"|(?P<wheel_wobble>\bsteering wheel (?:starts? to )?(?:shimmy|wobbl\w*)\b)"
+    r"|(?P<steering_control>\bsteering(?: wheel)? feels (?:heav(?:y|ier)|loose)\b)"
+    r"|(?P<persistent_correction>\b(?:pulls?|tugs?)\b.{0,45}\b(?:straight.? )?flat road\b"
+    r".{0,80}\b(?:have|need) to keep correcting\b)"
+    r"|(?P<pedal_travel>\bbrake pedal (?:goes|travels)\b.{0,40}\blong before it bites\b)",
     re.IGNORECASE,
 )
 

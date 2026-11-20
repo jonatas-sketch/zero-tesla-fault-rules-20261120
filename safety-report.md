@@ -9,13 +9,13 @@ The reviewed subset contains only positives. These counts measure batch coverage
 
 | Exercise ID | Initial | Expected | Technical context |
 |---|---|---|---|
-| MSG-10101 | soon | safety_urgent | Braking or steering mentioned, with limited detail. The local review found braking or steering evidence. |
-| MSG-10140 | soon | safety_urgent | Unexpected driving or suspension noise. The local review found braking or steering evidence. |
-| MSG-10170 | routine | safety_urgent | Braking or steering mentioned, with limited detail. Screen, account, app, or phone key. The local review found braking or steering evidence. |
-| MSG-10219 | soon | safety_urgent | Braking or steering mentioned, with limited detail. The local review found braking or steering evidence. |
-| MSG-10230 | routine | safety_urgent | Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key. The local review found braking or steering evidence. |
-| MSG-10278 | routine | safety_urgent | Braking or steering mentioned, with limited detail. The local review found braking or steering evidence. |
-| MSG-10286 | soon | safety_urgent | Braking or steering mentioned, with limited detail. The local review found braking or steering evidence. |
+| MSG-10101 | soon | safety_urgent | The vehicle pulls to one side while stopping. |
+| MSG-10140 | soon | safety_urgent | Grinding or scraping occurs when the brake pedal is pressed. |
+| MSG-10170 | routine | safety_urgent | Repeated steering correction is needed on a flat road. |
+| MSG-10219 | soon | safety_urgent | The steering wheel shimmies or wobbles while driving. |
+| MSG-10230 | routine | safety_urgent | The steering feels unusually heavy or loose. |
+| MSG-10278 | routine | safety_urgent | The steering wheel shimmies or wobbles while driving. |
+| MSG-10286 | soon | safety_urgent | The brake pedal travels further before the brakes engage. |
 
 ## Booking results
 
