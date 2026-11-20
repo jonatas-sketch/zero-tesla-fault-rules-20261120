@@ -1,301 +1,301 @@
-message_id,received_rank,technical_summary,urgency_tag,fix_path,booking_status,slot_id,slot_date,slot_start_time,needs_human_review
-MSG-10198,2,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0001,2026-11-16,07:00,True
-MSG-10050,5,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0003,2026-11-16,08:00,True
-MSG-10002,6,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0005,2026-11-16,09:00,True
-MSG-10100,7,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0007,2026-11-16,10:00,True
-MSG-10101,10,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0011,2026-11-16,10:00,True
-MSG-10003,12,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0013,2026-11-16,11:00,True
-MSG-10200,13,"Uncommanded pull during braking or slowing. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0014,2026-11-16,11:00,True
-MSG-10296,14,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0017,2026-11-16,13:00,True
-MSG-10103,18,Uncommanded pull during braking or slowing. ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0019,2026-11-16,13:00,True
-MSG-10297,20,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0021,2026-11-16,13:00,True
-MSG-10202,26,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0023,2026-11-16,14:00,True
-MSG-10006,30,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0025,2026-11-16,14:00,True
-MSG-10027,31,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0028,2026-11-16,14:00,True
-MSG-10299,32,Uncommanded pull during braking or slowing.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0030,2026-11-16,15:00,True
-MSG-10107,39,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0032,2026-11-16,15:00,True
-MSG-10057,42,"ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0034,2026-11-16,15:00,True
-MSG-10205,48,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0036,2026-11-16,15:00,True
-MSG-10009,50,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0037,2026-11-16,16:00,True
-MSG-10032,51,"Soft or sinking brake pedal. Uncommanded pull during braking or slowing. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0040,2026-11-16,16:00,True
-MSG-10110,56,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0041,2026-11-16,16:00,True
-MSG-10062,64,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0043,2026-11-16,17:00,True
-MSG-10036,65,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0045,2026-11-16,17:00,True
-MSG-10112,66,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0047,2026-11-16,17:00,True
-MSG-10208,68,Grinding or a marked vibration specifically when braking. Unexpected driving or suspension noise.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0048,2026-11-16,17:00,True
-MSG-10012,70,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0050,2026-11-17,07:00,True
-MSG-10114,75,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0051,2026-11-17,08:00,True
-MSG-10013,76,"Soft or sinking brake pedal. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0054,2026-11-17,08:00,True
-MSG-10039,77,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0055,2026-11-17,09:00,True
-MSG-10066,81,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0058,2026-11-17,09:00,True
-MSG-10124,86,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0060,2026-11-17,10:00,True
-MSG-10211,88,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0063,2026-11-17,10:00,True
-MSG-10076,89,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0065,2026-11-17,10:00,True
-MSG-10127,98,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0066,2026-11-17,11:00,True
-MSG-10079,100,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0069,2026-11-17,11:00,True
-MSG-10117,102,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0070,2026-11-17,11:00,True
-MSG-10069,104,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0072,2026-11-17,13:00,True
-MSG-10016,106,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0074,2026-11-17,13:00,True
-MSG-10082,112,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0076,2026-11-17,13:00,True
-MSG-10132,115,Uncommanded pull during braking or slowing.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0078,2026-11-17,13:00,True
-MSG-10083,117,"Uncommanded pull during braking or slowing. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0080,2026-11-17,14:00,True
-MSG-10119,124,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0082,2026-11-17,14:00,True
-MSG-10149,125,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0084,2026-11-17,14:00,True
-MSG-10135,126,Soft or sinking brake pedal. ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0085,2026-11-17,14:00,True
-MSG-10018,127,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0087,2026-11-17,14:00,True
-MSG-10045,131,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0088,2026-11-17,15:00,True
-MSG-10151,136,"ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0089,2026-11-17,15:00,True
-MSG-10087,137,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0092,2026-11-17,15:00,True
-MSG-10140,146,Unexpected driving or suspension noise.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0093,2026-11-17,15:00,True
-MSG-10153,147,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0095,2026-11-17,15:00,True
-MSG-10073,148,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0096,2026-11-17,16:00,True
-MSG-10154,154,"ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0098,2026-11-17,16:00,True
-MSG-10091,155,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0100,2026-11-17,16:00,True
-MSG-10048,160,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0101,2026-11-17,16:00,True
-MSG-10093,163,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0103,2026-11-17,16:00,True
-MSG-10144,164,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0104,2026-11-17,17:00,True
-MSG-10157,169,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0106,2026-11-17,17:00,True
-MSG-10218,172,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0107,2026-11-17,17:00,True
-MSG-10223,175,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0109,2026-11-17,17:00,True
-MSG-10096,176,No recognizable technical cue. Flag for manual review.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0111,2026-11-18,07:00,True
-MSG-10174,178,"Soft or sinking brake pedal. Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0113,2026-11-18,07:00,True
-MSG-10224,179,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0114,2026-11-18,08:00,True
-MSG-10022,181,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0116,2026-11-18,08:00,True
-MSG-10160,183,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0118,2026-11-18,08:00,True
-MSG-10176,187,"Soft or sinking brake pedal. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0119,2026-11-18,09:00,True
-MSG-10219,189,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0121,2026-11-18,09:00,True
-MSG-10226,193,Uncommanded pull during braking or slowing.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0123,2026-11-18,09:00,True
-MSG-10163,194,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0124,2026-11-18,09:00,True
-MSG-10178,196,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0125,2026-11-18,10:00,True
-MSG-10165,202,"Grinding or a marked vibration specifically when braking. Unexpected driving or suspension noise. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0127,2026-11-18,10:00,True
-MSG-10180,203,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0128,2026-11-18,10:00,True
-MSG-10229,206,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0130,2026-11-18,10:00,True
-MSG-10248,207,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0132,2026-11-18,11:00,True
-MSG-10230,208,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0133,2026-11-18,11:00,True
-MSG-10024,210,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0135,2026-11-18,11:00,True
-MSG-10249,213,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0137,2026-11-18,11:00,True
-MSG-10183,216,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0139,2026-11-18,13:00,True
-MSG-10169,219,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0141,2026-11-18,13:00,True
-MSG-10185,223,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0143,2026-11-18,13:00,True
-MSG-10233,224,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0144,2026-11-18,13:00,True
-MSG-10170,226,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0146,2026-11-18,13:00,True
-MSG-10234,228,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0147,2026-11-18,14:00,True
-MSG-10253,229,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0148,2026-11-18,14:00,True
-MSG-10187,231,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0150,2026-11-18,14:00,True
-MSG-10172,234,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0152,2026-11-18,14:00,True
-MSG-10189,238,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0153,2026-11-18,14:00,True
-MSG-10237,241,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0155,2026-11-18,15:00,True
-MSG-10259,249,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0157,2026-11-18,15:00,True
-MSG-10240,250,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0159,2026-11-18,15:00,True
-MSG-10193,251,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0160,2026-11-18,15:00,True
-MSG-10262,258,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0162,2026-11-18,15:00,True
-MSG-10243,260,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0163,2026-11-18,16:00,True
-MSG-10196,262,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0165,2026-11-18,16:00,True
-MSG-10245,267,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0166,2026-11-18,16:00,True
-MSG-10265,268,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0168,2026-11-18,16:00,True
-MSG-10274,269,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0169,2026-11-18,16:00,True
-MSG-10247,273,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0170,2026-11-18,17:00,True
-MSG-10269,276,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0172,2026-11-18,17:00,True
-MSG-10276,278,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0173,2026-11-18,17:00,True
-MSG-10278,281,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0175,2026-11-18,17:00,True
-MSG-10280,283,Soft or sinking brake pedal. ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0176,2026-11-18,17:00,True
-MSG-10282,287,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0177,2026-11-19,07:00,True
-MSG-10284,289,No recognizable technical cue. Flag for manual review.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0178,2026-11-19,07:00,True
-MSG-10286,291,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0179,2026-11-19,08:00,True
-MSG-10289,296,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0182,2026-11-19,08:00,True
-MSG-10292,299,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0183,2026-11-19,08:00,True
-MSG-10001,1,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0009,2026-11-16,10:00,False
-MSG-10099,4,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0015,2026-11-16,11:00,True
-MSG-10051,11,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0016,2026-11-16,11:00,False
-MSG-10102,15,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0024,2026-11-16,14:00,True
-MSG-10055,28,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0033,2026-11-16,15:00,False
-MSG-10105,29,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0038,2026-11-16,16:00,True
-MSG-10028,34,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0042,2026-11-16,16:00,False
-MSG-10056,35,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0046,2026-11-16,17:00,True
-MSG-10007,37,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0056,2026-11-17,09:00,False
-MSG-10058,45,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0062,2026-11-17,10:00,True
-MSG-10031,46,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0067,2026-11-17,11:00,True
-MSG-10033,54,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0071,2026-11-17,11:00,False
-MSG-10206,55,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0075,2026-11-17,13:00,False
-MSG-10061,59,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0079,2026-11-17,13:00,True
-MSG-10207,60,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0081,2026-11-17,14:00,False
-MSG-10035,61,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0090,2026-11-17,15:00,True
-MSG-10011,63,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0094,2026-11-17,15:00,True
-MSG-10065,78,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0097,2026-11-17,16:00,True
-MSG-10115,82,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0105,2026-11-17,17:00,True
-MSG-10041,84,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0108,2026-11-17,17:00,True
-MSG-10075,85,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0115,2026-11-18,08:00,False
-MSG-10125,90,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0122,2026-11-18,09:00,True
-MSG-10015,93,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0126,2026-11-18,10:00,False
-MSG-10126,95,Unexpected driving or suspension noise.,soon,book_service_soon,booked,SLOT-0131,2026-11-18,10:00,True
-MSG-10212,99,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0134,2026-11-18,11:00,True
-MSG-10081,107,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0138,2026-11-18,11:00,True
-MSG-10130,109,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0140,2026-11-18,13:00,True
-MSG-10131,110,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0145,2026-11-18,13:00,True
-MSG-10133,119,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0149,2026-11-18,14:00,True
-MSG-10071,120,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0154,2026-11-18,14:00,False
-MSG-10084,121,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0156,2026-11-18,15:00,True
-MSG-10134,122,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0161,2026-11-18,15:00,False
-MSG-10085,128,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0164,2026-11-18,16:00,False
-MSG-10086,133,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0171,2026-11-18,17:00,False
-MSG-10138,138,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0180,2026-11-19,08:00,True
-MSG-10088,140,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0184,2026-11-19,09:00,True
-MSG-10216,144,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0185,2026-11-19,09:00,False
-MSG-10089,145,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0186,2026-11-19,09:00,True
-MSG-10120,149,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0188,2026-11-19,09:00,True
-MSG-10047,150,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0189,2026-11-19,09:00,True
-MSG-10141,152,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0190,2026-11-19,10:00,True
-MSG-10020,156,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0191,2026-11-19,10:00,False
-MSG-10074,162,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0192,2026-11-19,10:00,True
-MSG-10021,167,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0194,2026-11-19,10:00,False
-MSG-10049,168,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0195,2026-11-19,10:00,False
-MSG-10095,170,Unexpected driving or suspension noise.,soon,book_service_soon,booked,SLOT-0196,2026-11-19,10:00,False
-MSG-10145,171,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0197,2026-11-19,11:00,True
-MSG-10121,173,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0198,2026-11-19,11:00,False
-MSG-10158,174,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0199,2026-11-19,11:00,False
-MSG-10161,186,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0200,2026-11-19,11:00,False
-MSG-10023,198,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0202,2026-11-19,11:00,False
-MSG-10164,199,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0203,2026-11-19,11:00,False
-MSG-10179,200,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0204,2026-11-19,11:00,False
-MSG-10228,201,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0205,2026-11-19,13:00,False
-MSG-10232,218,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0206,2026-11-19,13:00,False
-MSG-10186,227,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0207,2026-11-19,13:00,False
-MSG-10238,244,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0208,2026-11-19,13:00,False
-MSG-10192,248,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0210,2026-11-19,13:00,True
-MSG-10241,253,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0211,2026-11-19,13:00,True
-MSG-10261,254,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0212,2026-11-19,13:00,False
-MSG-10194,255,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0213,2026-11-19,14:00,False
-MSG-10195,259,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0214,2026-11-19,14:00,True
-MSG-10270,277,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0215,2026-11-19,14:00,False
-MSG-10277,280,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0217,2026-11-19,14:00,False
-MSG-10283,288,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0218,2026-11-19,14:00,True
-MSG-10290,297,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0219,2026-11-19,14:00,False
-MSG-10294,3,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0002,2026-11-16,08:00,False
-MSG-10199,8,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0220,2026-11-19,14:00,False
-MSG-10295,9,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0221,2026-11-19,15:00,False
-MSG-10052,16,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0222,2026-11-19,15:00,False
-MSG-10004,17,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0223,2026-11-19,15:00,False
-MSG-10201,19,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0224,2026-11-19,15:00,False
-MSG-10053,21,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0004,2026-11-16,09:00,False
-MSG-10026,22,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0226,2026-11-19,15:00,False
-MSG-10104,23,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0227,2026-11-19,15:00,False
-MSG-10005,24,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0006,2026-11-16,09:00,False
-MSG-10054,25,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0008,2026-11-16,10:00,False
-MSG-10298,27,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0228,2026-11-19,15:00,False
-MSG-10203,33,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0010,2026-11-16,10:00,False
-MSG-10106,36,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0012,2026-11-16,11:00,False
-MSG-10029,38,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0018,2026-11-16,13:00,False
-MSG-10204,40,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0020,2026-11-16,13:00,False
-MSG-10300,41,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0229,2026-11-19,16:00,False
-MSG-10030,43,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0230,2026-11-19,16:00,False
-MSG-10008,44,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0022,2026-11-16,13:00,False
-MSG-10108,47,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0231,2026-11-19,16:00,False
-MSG-10059,49,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0232,2026-11-19,16:00,False
-MSG-10109,52,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0234,2026-11-19,16:00,False
-MSG-10060,53,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0026,2026-11-16,14:00,False
-MSG-10010,57,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0027,2026-11-16,14:00,False
-MSG-10034,58,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0029,2026-11-16,14:00,False
-MSG-10111,62,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0031,2026-11-16,15:00,False
-MSG-10063,67,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0235,2026-11-19,16:00,False
-MSG-10037,69,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0236,2026-11-19,17:00,False
-MSG-10113,71,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0237,2026-11-19,17:00,False
-MSG-10209,72,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0035,2026-11-16,15:00,False
-MSG-10064,73,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0039,2026-11-16,16:00,False
-MSG-10038,74,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0044,2026-11-16,17:00,False
-MSG-10210,79,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0238,2026-11-19,17:00,False
-MSG-10040,80,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0049,2026-11-17,07:00,False
-MSG-10014,83,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0239,2026-11-19,17:00,False
-MSG-10067,87,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0052,2026-11-17,08:00,False
-MSG-10116,91,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0240,2026-11-19,17:00,False
-MSG-10077,92,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0241,2026-11-19,17:00,False
-MSG-10042,94,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0242,2026-11-19,17:00,False
-MSG-10078,96,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0053,2026-11-17,08:00,False
-MSG-10068,97,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0243,2026-11-20,07:00,False
-MSG-10128,101,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0245,2026-11-20,07:00,False
-MSG-10080,103,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0057,2026-11-17,09:00,False
-MSG-10129,105,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0246,2026-11-20,08:00,False
-MSG-10213,108,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0059,2026-11-17,09:00,False
-MSG-10070,111,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0061,2026-11-17,10:00,False
-MSG-10118,113,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0064,2026-11-17,10:00,False
-MSG-10043,114,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0247,2026-11-20,08:00,False
-MSG-10017,116,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0068,2026-11-17,11:00,False
-MSG-10214,118,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0248,2026-11-20,08:00,False
-MSG-10044,123,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0250,2026-11-20,08:00,False
-MSG-10150,129,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0251,2026-11-20,09:00,False
-MSG-10136,130,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0073,2026-11-17,13:00,False
-MSG-10215,132,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0077,2026-11-17,13:00,False
-MSG-10072,134,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0083,2026-11-17,14:00,False
-MSG-10137,135,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0252,2026-11-20,09:00,False
-MSG-10046,139,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0086,2026-11-17,14:00,False
-MSG-10139,141,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0091,2026-11-17,15:00,False
-MSG-10019,142,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0099,2026-11-17,16:00,False
-MSG-10152,143,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0253,2026-11-20,09:00,False
-MSG-10090,151,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0255,2026-11-20,09:00,False
-MSG-10142,153,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0256,2026-11-20,09:00,False
-MSG-10155,157,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0102,2026-11-17,16:00,False
-MSG-10217,158,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0110,2026-11-17,17:00,False
-MSG-10143,159,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0112,2026-11-18,07:00,False
-MSG-10092,161,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0117,2026-11-18,08:00,False
-MSG-10156,165,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0120,2026-11-18,09:00,False
-MSG-10094,166,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0129,2026-11-18,10:00,False
-MSG-10159,177,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0257,2026-11-20,09:00,False
-MSG-10146,180,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0258,2026-11-20,10:00,False
-MSG-10097,182,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0259,2026-11-20,10:00,False
-MSG-10175,184,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0260,2026-11-20,10:00,False
-MSG-10225,185,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0261,2026-11-20,10:00,False
-MSG-10098,188,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0136,2026-11-18,11:00,False
-MSG-10147,190,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0142,2026-11-18,13:00,False
-MSG-10162,191,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0263,2026-11-20,10:00,False
-MSG-10177,192,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0151,2026-11-18,14:00,False
-MSG-10148,195,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0158,2026-11-18,15:00,False
-MSG-10227,197,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0264,2026-11-20,10:00,False
-MSG-10166,204,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0265,2026-11-20,10:00,False
-MSG-10181,205,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0266,2026-11-20,11:00,False
-MSG-10167,209,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0267,2026-11-20,11:00,False
-MSG-10182,211,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0268,2026-11-20,11:00,False
-MSG-10220,212,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0167,2026-11-18,16:00,False
-MSG-10231,214,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0174,2026-11-18,17:00,False
-MSG-10168,215,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0181,2026-11-19,08:00,False
-MSG-10250,217,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0269,2026-11-20,11:00,False
-MSG-10184,220,No recognizable technical cue. Flag for manual review.,routine,remote_troubleshooting,booked,SLOT-0187,2026-11-19,09:00,True
-MSG-10122,221,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0271,2026-11-20,11:00,False
-MSG-10251,222,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0193,2026-11-19,10:00,False
-MSG-10252,225,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0272,2026-11-20,11:00,False
-MSG-10171,230,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0273,2026-11-20,11:00,False
-MSG-10235,232,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0274,2026-11-20,13:00,False
-MSG-10254,233,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0201,2026-11-19,11:00,False
-MSG-10188,235,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0209,2026-11-19,13:00,False
-MSG-10236,236,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0216,2026-11-19,14:00,False
-MSG-10255,237,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0225,2026-11-19,15:00,False
-MSG-10256,239,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0275,2026-11-20,13:00,False
-MSG-10173,240,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0233,2026-11-19,16:00,False
-MSG-10190,242,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0276,2026-11-20,13:00,False
-MSG-10257,243,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0244,2026-11-20,07:00,False
-MSG-10191,245,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0249,2026-11-20,08:00,False
-MSG-10258,246,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0254,2026-11-20,09:00,False
-MSG-10239,247,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0262,2026-11-20,10:00,False
-MSG-10260,252,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0270,2026-11-20,11:00,False
-MSG-10221,256,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0278,2026-11-20,13:00,False
-MSG-10242,257,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0279,2026-11-20,13:00,False
-MSG-10263,261,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0280,2026-11-20,13:00,False
-MSG-10244,263,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0281,2026-11-20,14:00,False
-MSG-10264,264,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0277,2026-11-20,13:00,False
-MSG-10197,265,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0285,2026-11-20,14:00,False
-MSG-10273,266,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0282,2026-11-20,14:00,False
-MSG-10266,270,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0283,2026-11-20,14:00,False
-MSG-10246,271,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0289,2026-11-20,15:00,False
-MSG-10267,272,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0302,2026-11-21,07:00,False
-MSG-10275,274,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0304,2026-11-21,08:00,False
-MSG-10268,275,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0309,2026-11-21,09:00,False
-MSG-10271,279,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0314,2026-11-21,10:00,False
-MSG-10279,282,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0284,2026-11-20,14:00,False
-MSG-10281,284,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0286,2026-11-20,14:00,False
-MSG-10123,285,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True
-MSG-10222,286,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True
-MSG-10285,290,"Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True
-MSG-10025,292,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True
-MSG-10287,293,"Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True
-MSG-10288,294,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0287,2026-11-20,15:00,False
-MSG-10272,295,"Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True
-MSG-10291,298,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0288,2026-11-20,15:00,False
-MSG-10293,300,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0290,2026-11-20,15:00,False
+message_id,received_rank,technical_summary,urgency_tag,fix_path,booking_status,slot_id,slot_date,slot_start_time,needs_human_review,safety_evidence
+MSG-10198,2,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0001,2026-11-16,07:00,True,Soft or sinking brake pedal.
+MSG-10050,5,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0003,2026-11-16,08:00,True,Soft or sinking brake pedal.
+MSG-10002,6,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0005,2026-11-16,09:00,True,Soft or sinking brake pedal.
+MSG-10100,7,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0007,2026-11-16,10:00,True,Listed safety alert BRK_w003.
+MSG-10101,10,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0011,2026-11-16,10:00,True,The vehicle pulls to one side while stopping.
+MSG-10003,12,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0013,2026-11-16,11:00,True,Listed safety alert ABS_w002.
+MSG-10200,13,"Uncommanded pull during braking or slowing. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0014,2026-11-16,11:00,True,Listed safety alert ABS_w002.
+MSG-10296,14,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0017,2026-11-16,13:00,True,Soft or sinking brake pedal.
+MSG-10103,18,Uncommanded pull during braking or slowing. ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0019,2026-11-16,13:00,True,Listed safety alert ESP_w003.
+MSG-10297,20,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0021,2026-11-16,13:00,True,Listed safety alert ABS_w002.
+MSG-10202,26,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0023,2026-11-16,14:00,True,Listed safety alert BRK_w003.
+MSG-10006,30,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0025,2026-11-16,14:00,True,Uncommanded pull during braking or slowing.
+MSG-10027,31,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0028,2026-11-16,14:00,True,Listed safety alert ABS_w002.
+MSG-10299,32,Uncommanded pull during braking or slowing.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0030,2026-11-16,15:00,True,Uncommanded pull during braking or slowing.
+MSG-10107,39,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0032,2026-11-16,15:00,True,Listed safety alert EPAS_a191.
+MSG-10057,42,"ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0034,2026-11-16,15:00,True,Listed safety alert ABS_w002.
+MSG-10205,48,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0036,2026-11-16,15:00,True,Listed safety alert EPAS_w202.
+MSG-10009,50,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0037,2026-11-16,16:00,True,Listed safety alert EPAS_w202.
+MSG-10032,51,"Soft or sinking brake pedal. Uncommanded pull during braking or slowing. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0040,2026-11-16,16:00,True,Soft or sinking brake pedal.
+MSG-10110,56,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0041,2026-11-16,16:00,True,Listed safety alert ABS_w002.
+MSG-10062,64,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0043,2026-11-16,17:00,True,The vehicle pulls to one side while stopping.
+MSG-10036,65,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0045,2026-11-16,17:00,True,Grinding or a marked vibration specifically when braking.
+MSG-10112,66,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0047,2026-11-16,17:00,True,Soft or sinking brake pedal.
+MSG-10208,68,Grinding or a marked vibration specifically when braking. Unexpected driving or suspension noise.,safety_urgent,priority_safety_inspection,safety_same_day,SLOT-0048,2026-11-16,17:00,True,The vehicle pulls to one side while stopping.
+MSG-10012,70,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0050,2026-11-17,07:00,True,Listed safety alert BRK_w003.
+MSG-10114,75,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0051,2026-11-17,08:00,True,Listed safety alert BRK_w003.
+MSG-10013,76,"Soft or sinking brake pedal. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0054,2026-11-17,08:00,True,Soft or sinking brake pedal. Grinding or a marked vibration specifically when braking.
+MSG-10039,77,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0055,2026-11-17,09:00,True,Listed safety alert EPAS_w202.
+MSG-10066,81,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0058,2026-11-17,09:00,True,Listed safety alert BRK_w003.
+MSG-10124,86,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0060,2026-11-17,10:00,True,Listed safety alert BRK_w003.
+MSG-10211,88,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0063,2026-11-17,10:00,True,Listed safety alert ESP_w003.
+MSG-10076,89,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0065,2026-11-17,10:00,True,Soft or sinking brake pedal.
+MSG-10127,98,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0066,2026-11-17,11:00,True,Soft or sinking brake pedal.
+MSG-10079,100,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0069,2026-11-17,11:00,True,Listed safety alert ESP_w003.
+MSG-10117,102,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0070,2026-11-17,11:00,True,Listed safety alert ESP_w003.
+MSG-10069,104,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0072,2026-11-17,13:00,True,Grinding or a marked vibration specifically when braking.
+MSG-10016,106,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0074,2026-11-17,13:00,True,Listed safety alert ESP_w003.
+MSG-10082,112,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0076,2026-11-17,13:00,True,Listed safety alert BRK_w003.
+MSG-10132,115,Uncommanded pull during braking or slowing.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0078,2026-11-17,13:00,True,Uncommanded pull during braking or slowing.
+MSG-10083,117,"Uncommanded pull during braking or slowing. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0080,2026-11-17,14:00,True,Uncommanded pull during braking or slowing. Grinding or a marked vibration specifically when braking.
+MSG-10119,124,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0082,2026-11-17,14:00,True,Listed safety alert BRK_a001.
+MSG-10149,125,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0084,2026-11-17,14:00,True,Soft or sinking brake pedal.
+MSG-10135,126,Soft or sinking brake pedal. ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0085,2026-11-17,14:00,True,Listed safety alert ABS_w002.
+MSG-10018,127,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0087,2026-11-17,14:00,True,Listed safety alert BRK_a001.
+MSG-10045,131,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0088,2026-11-17,15:00,True,Listed safety alert BRK_w003.
+MSG-10151,136,"ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0089,2026-11-17,15:00,True,Listed safety alert ABS_w002.
+MSG-10087,137,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0092,2026-11-17,15:00,True,Listed safety alert ABS_w002.
+MSG-10140,146,Unexpected driving or suspension noise.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0093,2026-11-17,15:00,True,Grinding or scraping occurs when the brake pedal is pressed.
+MSG-10153,147,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0095,2026-11-17,15:00,True,Safety tag assigned. Review the underlying report.
+MSG-10073,148,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0096,2026-11-17,16:00,True,Listed safety alert ESP_w003.
+MSG-10154,154,"ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0098,2026-11-17,16:00,True,Listed safety alert ESP_w003.
+MSG-10091,155,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0100,2026-11-17,16:00,True,Uncommanded pull during braking or slowing.
+MSG-10048,160,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0101,2026-11-17,16:00,True,Listed safety alert ABS_w002.
+MSG-10093,163,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0103,2026-11-17,16:00,True,Listed safety alert BRK_a001.
+MSG-10144,164,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0104,2026-11-17,17:00,True,Listed safety alert ESP_w003.
+MSG-10157,169,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0106,2026-11-17,17:00,True,Listed safety alert BRK_w003.
+MSG-10218,172,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0107,2026-11-17,17:00,True,Listed safety alert ABS_w002.
+MSG-10223,175,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0109,2026-11-17,17:00,True,Soft or sinking brake pedal.
+MSG-10096,176,No recognizable technical cue. Flag for manual review.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0111,2026-11-18,07:00,True,Listed safety alert ESP_w003.
+MSG-10174,178,"Soft or sinking brake pedal. Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0113,2026-11-18,07:00,True,Soft or sinking brake pedal. Uncommanded pull during braking or slowing.
+MSG-10224,179,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0114,2026-11-18,08:00,True,Listed safety alert BRK_w003.
+MSG-10022,181,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0116,2026-11-18,08:00,True,Listed safety alert ABS_w002.
+MSG-10160,183,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0118,2026-11-18,08:00,True,Listed safety alert EPAS_w202.
+MSG-10176,187,"Soft or sinking brake pedal. Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0119,2026-11-18,09:00,True,Soft or sinking brake pedal. Grinding or a marked vibration specifically when braking.
+MSG-10219,189,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0121,2026-11-18,09:00,True,The steering wheel shimmies or wobbles while driving.
+MSG-10226,193,Uncommanded pull during braking or slowing.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0123,2026-11-18,09:00,True,Safety tag assigned. Review the underlying report.
+MSG-10163,194,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0124,2026-11-18,09:00,True,Listed safety alert ABS_w002.
+MSG-10178,196,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0125,2026-11-18,10:00,True,Listed safety alert ESP_w003.
+MSG-10165,202,"Grinding or a marked vibration specifically when braking. Unexpected driving or suspension noise. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0127,2026-11-18,10:00,True,Grinding or a marked vibration specifically when braking.
+MSG-10180,203,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0128,2026-11-18,10:00,True,Listed safety alert BRK_w003.
+MSG-10229,206,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0130,2026-11-18,10:00,True,Listed safety alert ABS_w002.
+MSG-10248,207,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0132,2026-11-18,11:00,True,Soft or sinking brake pedal.
+MSG-10230,208,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0133,2026-11-18,11:00,True,The steering feels unusually heavy or loose.
+MSG-10024,210,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0135,2026-11-18,11:00,True,Listed safety alert BRK_w003.
+MSG-10249,213,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0137,2026-11-18,11:00,True,Listed safety alert BRK_w003.
+MSG-10183,216,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0139,2026-11-18,13:00,True,Listed safety alert ABS_w002.
+MSG-10169,219,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0141,2026-11-18,13:00,True,Listed safety alert BRK_a001.
+MSG-10185,223,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0143,2026-11-18,13:00,True,The steering feels unusually heavy or loose.
+MSG-10233,224,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0144,2026-11-18,13:00,True,Listed safety alert EPAS_w202.
+MSG-10170,226,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0146,2026-11-18,13:00,True,Repeated steering correction is needed on a flat road.
+MSG-10234,228,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0147,2026-11-18,14:00,True,Listed safety alert BRK_a001.
+MSG-10253,229,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0148,2026-11-18,14:00,True,The vehicle pulls to one side while stopping.
+MSG-10187,231,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0150,2026-11-18,14:00,True,Listed safety alert EPAS_w202.
+MSG-10172,234,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0152,2026-11-18,14:00,True,Listed safety alert EPAS_a191.
+MSG-10189,238,Soft or sinking brake pedal.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0153,2026-11-18,14:00,True,Soft or sinking brake pedal.
+MSG-10237,241,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0155,2026-11-18,15:00,True,Listed safety alert ESP_w003.
+MSG-10259,249,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0157,2026-11-18,15:00,True,Listed safety alert ABS_w002.
+MSG-10240,250,"Grinding or a marked vibration specifically when braking. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0159,2026-11-18,15:00,True,Grinding or a marked vibration specifically when braking.
+MSG-10193,251,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0160,2026-11-18,15:00,True,Listed safety alert ESP_w003.
+MSG-10262,258,ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0162,2026-11-18,15:00,True,Listed safety alert ESP_w003.
+MSG-10243,260,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0163,2026-11-18,16:00,True,Listed safety alert ABS_w002.
+MSG-10196,262,"Soft or sinking brake pedal. Braking or steering mentioned, with limited detail. ABS or stability control mentioned. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0165,2026-11-18,16:00,True,Listed safety alert BRK_a001.
+MSG-10245,267,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0166,2026-11-18,16:00,True,Uncommanded pull during braking or slowing.
+MSG-10265,268,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0168,2026-11-18,16:00,True,Listed safety alert EPAS_a191.
+MSG-10274,269,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0169,2026-11-18,16:00,True,Uncommanded pull during braking or slowing.
+MSG-10247,273,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0170,2026-11-18,17:00,True,Listed safety alert EPAS_a191.
+MSG-10269,276,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0172,2026-11-18,17:00,True,Uncommanded pull during braking or slowing.
+MSG-10276,278,"Braking or steering mentioned, with limited detail. ABS or stability control mentioned.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0173,2026-11-18,17:00,True,Listed safety alert BRK_w003.
+MSG-10278,281,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0175,2026-11-18,17:00,True,The steering wheel shimmies or wobbles while driving.
+MSG-10280,283,Soft or sinking brake pedal. ABS or stability control mentioned.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0176,2026-11-18,17:00,True,Listed safety alert ABS_w002.
+MSG-10282,287,"Steering became heavy, stiff, stuck, or intermittent. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0177,2026-11-19,07:00,True,Listed safety alert EPAS_a191.
+MSG-10284,289,No recognizable technical cue. Flag for manual review.,safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0178,2026-11-19,07:00,True,Listed safety alert ESP_w003.
+MSG-10286,291,"Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0179,2026-11-19,08:00,True,The brake pedal travels further before the brakes engage.
+MSG-10289,296,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0182,2026-11-19,08:00,True,Listed safety alert BRK_a001.
+MSG-10292,299,"Uncommanded pull during braking or slowing. Braking or steering mentioned, with limited detail.",safety_urgent,priority_safety_inspection,safety_overflow_escalated,SLOT-0183,2026-11-19,08:00,True,Uncommanded pull during braking or slowing.
+MSG-10001,1,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0009,2026-11-16,10:00,False,
+MSG-10099,4,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0015,2026-11-16,11:00,True,
+MSG-10051,11,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0016,2026-11-16,11:00,False,
+MSG-10102,15,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0024,2026-11-16,14:00,True,
+MSG-10055,28,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0033,2026-11-16,15:00,False,
+MSG-10105,29,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0038,2026-11-16,16:00,True,
+MSG-10028,34,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0042,2026-11-16,16:00,False,
+MSG-10056,35,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0046,2026-11-16,17:00,True,
+MSG-10007,37,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0056,2026-11-17,09:00,False,
+MSG-10058,45,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0062,2026-11-17,10:00,True,
+MSG-10031,46,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0067,2026-11-17,11:00,True,
+MSG-10033,54,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0071,2026-11-17,11:00,False,
+MSG-10206,55,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0075,2026-11-17,13:00,False,
+MSG-10061,59,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0079,2026-11-17,13:00,True,
+MSG-10207,60,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0081,2026-11-17,14:00,False,
+MSG-10035,61,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0090,2026-11-17,15:00,True,
+MSG-10011,63,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0094,2026-11-17,15:00,True,
+MSG-10065,78,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0097,2026-11-17,16:00,True,
+MSG-10115,82,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0105,2026-11-17,17:00,True,
+MSG-10041,84,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0108,2026-11-17,17:00,True,
+MSG-10075,85,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0115,2026-11-18,08:00,False,
+MSG-10125,90,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0122,2026-11-18,09:00,True,
+MSG-10015,93,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0126,2026-11-18,10:00,False,
+MSG-10126,95,Unexpected driving or suspension noise.,soon,book_service_soon,booked,SLOT-0131,2026-11-18,10:00,True,
+MSG-10212,99,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0134,2026-11-18,11:00,True,
+MSG-10081,107,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0138,2026-11-18,11:00,True,
+MSG-10130,109,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0140,2026-11-18,13:00,True,
+MSG-10131,110,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0145,2026-11-18,13:00,True,
+MSG-10133,119,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0149,2026-11-18,14:00,True,
+MSG-10071,120,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0154,2026-11-18,14:00,False,
+MSG-10084,121,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0156,2026-11-18,15:00,True,
+MSG-10134,122,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0161,2026-11-18,15:00,False,
+MSG-10085,128,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0164,2026-11-18,16:00,False,
+MSG-10086,133,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0171,2026-11-18,17:00,False,
+MSG-10138,138,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0180,2026-11-19,08:00,True,
+MSG-10088,140,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0184,2026-11-19,09:00,True,
+MSG-10216,144,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0185,2026-11-19,09:00,False,
+MSG-10089,145,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0186,2026-11-19,09:00,True,
+MSG-10120,149,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0188,2026-11-19,09:00,True,
+MSG-10047,150,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0189,2026-11-19,09:00,True,
+MSG-10141,152,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0190,2026-11-19,10:00,True,
+MSG-10020,156,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0191,2026-11-19,10:00,False,
+MSG-10074,162,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0192,2026-11-19,10:00,True,
+MSG-10021,167,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0194,2026-11-19,10:00,False,
+MSG-10049,168,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0195,2026-11-19,10:00,False,
+MSG-10095,170,Unexpected driving or suspension noise.,soon,book_service_soon,booked,SLOT-0196,2026-11-19,10:00,False,
+MSG-10145,171,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",soon,book_service_soon,booked,SLOT-0197,2026-11-19,11:00,True,
+MSG-10121,173,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0198,2026-11-19,11:00,False,
+MSG-10158,174,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0199,2026-11-19,11:00,False,
+MSG-10161,186,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0200,2026-11-19,11:00,False,
+MSG-10023,198,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0202,2026-11-19,11:00,False,
+MSG-10164,199,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0203,2026-11-19,11:00,False,
+MSG-10179,200,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0204,2026-11-19,11:00,False,
+MSG-10228,201,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0205,2026-11-19,13:00,False,
+MSG-10232,218,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0206,2026-11-19,13:00,False,
+MSG-10186,227,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0207,2026-11-19,13:00,False,
+MSG-10238,244,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0208,2026-11-19,13:00,False,
+MSG-10192,248,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0210,2026-11-19,13:00,True,
+MSG-10241,253,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0211,2026-11-19,13:00,True,
+MSG-10261,254,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0212,2026-11-19,13:00,False,
+MSG-10194,255,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0213,2026-11-19,14:00,False,
+MSG-10195,259,No recognizable technical cue. Flag for manual review.,soon,book_service_soon,booked,SLOT-0214,2026-11-19,14:00,True,
+MSG-10270,277,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0215,2026-11-19,14:00,False,
+MSG-10277,280,"Charging, range, or charge port. Screen, account, app, or phone key.",soon,book_service_soon,booked,SLOT-0217,2026-11-19,14:00,False,
+MSG-10283,288,"Braking or steering mentioned, with limited detail. Unexpected driving or suspension noise.",soon,book_service_soon,booked,SLOT-0218,2026-11-19,14:00,True,
+MSG-10290,297,"Charging, range, or charge port.",soon,book_service_soon,booked,SLOT-0219,2026-11-19,14:00,False,
+MSG-10294,3,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0002,2026-11-16,08:00,False,
+MSG-10199,8,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0220,2026-11-19,14:00,False,
+MSG-10295,9,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0221,2026-11-19,15:00,False,
+MSG-10052,16,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0222,2026-11-19,15:00,False,
+MSG-10004,17,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0223,2026-11-19,15:00,False,
+MSG-10201,19,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0224,2026-11-19,15:00,False,
+MSG-10053,21,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0004,2026-11-16,09:00,False,
+MSG-10026,22,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0226,2026-11-19,15:00,False,
+MSG-10104,23,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0227,2026-11-19,15:00,False,
+MSG-10005,24,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0006,2026-11-16,09:00,False,
+MSG-10054,25,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0008,2026-11-16,10:00,False,
+MSG-10298,27,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0228,2026-11-19,15:00,False,
+MSG-10203,33,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0010,2026-11-16,10:00,False,
+MSG-10106,36,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0012,2026-11-16,11:00,False,
+MSG-10029,38,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0018,2026-11-16,13:00,False,
+MSG-10204,40,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0020,2026-11-16,13:00,False,
+MSG-10300,41,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0229,2026-11-19,16:00,False,
+MSG-10030,43,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0230,2026-11-19,16:00,False,
+MSG-10008,44,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0022,2026-11-16,13:00,False,
+MSG-10108,47,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0231,2026-11-19,16:00,False,
+MSG-10059,49,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0232,2026-11-19,16:00,False,
+MSG-10109,52,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0234,2026-11-19,16:00,False,
+MSG-10060,53,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0026,2026-11-16,14:00,False,
+MSG-10010,57,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0027,2026-11-16,14:00,False,
+MSG-10034,58,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0029,2026-11-16,14:00,False,
+MSG-10111,62,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0031,2026-11-16,15:00,False,
+MSG-10063,67,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0235,2026-11-19,16:00,False,
+MSG-10037,69,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0236,2026-11-19,17:00,False,
+MSG-10113,71,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0237,2026-11-19,17:00,False,
+MSG-10209,72,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0035,2026-11-16,15:00,False,
+MSG-10064,73,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0039,2026-11-16,16:00,False,
+MSG-10038,74,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0044,2026-11-16,17:00,False,
+MSG-10210,79,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0238,2026-11-19,17:00,False,
+MSG-10040,80,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0049,2026-11-17,07:00,False,
+MSG-10014,83,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0239,2026-11-19,17:00,False,
+MSG-10067,87,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0052,2026-11-17,08:00,False,
+MSG-10116,91,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0240,2026-11-19,17:00,False,
+MSG-10077,92,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0241,2026-11-19,17:00,False,
+MSG-10042,94,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0242,2026-11-19,17:00,False,
+MSG-10078,96,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0053,2026-11-17,08:00,False,
+MSG-10068,97,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0243,2026-11-20,07:00,False,
+MSG-10128,101,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0245,2026-11-20,07:00,False,
+MSG-10080,103,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0057,2026-11-17,09:00,False,
+MSG-10129,105,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0246,2026-11-20,08:00,False,
+MSG-10213,108,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0059,2026-11-17,09:00,False,
+MSG-10070,111,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0061,2026-11-17,10:00,False,
+MSG-10118,113,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0064,2026-11-17,10:00,False,
+MSG-10043,114,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0247,2026-11-20,08:00,False,
+MSG-10017,116,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0068,2026-11-17,11:00,False,
+MSG-10214,118,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0248,2026-11-20,08:00,False,
+MSG-10044,123,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0250,2026-11-20,08:00,False,
+MSG-10150,129,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0251,2026-11-20,09:00,False,
+MSG-10136,130,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0073,2026-11-17,13:00,False,
+MSG-10215,132,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0077,2026-11-17,13:00,False,
+MSG-10072,134,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0083,2026-11-17,14:00,False,
+MSG-10137,135,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0252,2026-11-20,09:00,False,
+MSG-10046,139,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0086,2026-11-17,14:00,False,
+MSG-10139,141,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0091,2026-11-17,15:00,False,
+MSG-10019,142,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0099,2026-11-17,16:00,False,
+MSG-10152,143,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0253,2026-11-20,09:00,False,
+MSG-10090,151,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0255,2026-11-20,09:00,False,
+MSG-10142,153,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0256,2026-11-20,09:00,False,
+MSG-10155,157,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0102,2026-11-17,16:00,False,
+MSG-10217,158,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0110,2026-11-17,17:00,False,
+MSG-10143,159,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0112,2026-11-18,07:00,False,
+MSG-10092,161,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0117,2026-11-18,08:00,False,
+MSG-10156,165,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0120,2026-11-18,09:00,False,
+MSG-10094,166,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0129,2026-11-18,10:00,False,
+MSG-10159,177,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0257,2026-11-20,09:00,False,
+MSG-10146,180,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0258,2026-11-20,10:00,False,
+MSG-10097,182,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0259,2026-11-20,10:00,False,
+MSG-10175,184,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0260,2026-11-20,10:00,False,
+MSG-10225,185,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0261,2026-11-20,10:00,False,
+MSG-10098,188,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0136,2026-11-18,11:00,False,
+MSG-10147,190,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0142,2026-11-18,13:00,False,
+MSG-10162,191,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0263,2026-11-20,10:00,False,
+MSG-10177,192,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0151,2026-11-18,14:00,False,
+MSG-10148,195,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0158,2026-11-18,15:00,False,
+MSG-10227,197,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0264,2026-11-20,10:00,False,
+MSG-10166,204,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0265,2026-11-20,10:00,False,
+MSG-10181,205,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0266,2026-11-20,11:00,False,
+MSG-10167,209,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0267,2026-11-20,11:00,False,
+MSG-10182,211,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,routine_service_visit,booked,SLOT-0268,2026-11-20,11:00,False,
+MSG-10220,212,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0167,2026-11-18,16:00,False,
+MSG-10231,214,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0174,2026-11-18,17:00,False,
+MSG-10168,215,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0181,2026-11-19,08:00,False,
+MSG-10250,217,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0269,2026-11-20,11:00,False,
+MSG-10184,220,No recognizable technical cue. Flag for manual review.,routine,remote_troubleshooting,booked,SLOT-0187,2026-11-19,09:00,True,
+MSG-10122,221,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0271,2026-11-20,11:00,False,
+MSG-10251,222,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0193,2026-11-19,10:00,False,
+MSG-10252,225,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0272,2026-11-20,11:00,False,
+MSG-10171,230,Unexpected driving or suspension noise.,routine,routine_service_visit,booked,SLOT-0273,2026-11-20,11:00,False,
+MSG-10235,232,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0274,2026-11-20,13:00,False,
+MSG-10254,233,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0201,2026-11-19,11:00,False,
+MSG-10188,235,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0209,2026-11-19,13:00,False,
+MSG-10236,236,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0216,2026-11-19,14:00,False,
+MSG-10255,237,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0225,2026-11-19,15:00,False,
+MSG-10256,239,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0275,2026-11-20,13:00,False,
+MSG-10173,240,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0233,2026-11-19,16:00,False,
+MSG-10190,242,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0276,2026-11-20,13:00,False,
+MSG-10257,243,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0244,2026-11-20,07:00,False,
+MSG-10191,245,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0249,2026-11-20,08:00,False,
+MSG-10258,246,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0254,2026-11-20,09:00,False,
+MSG-10239,247,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0262,2026-11-20,10:00,False,
+MSG-10260,252,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0270,2026-11-20,11:00,False,
+MSG-10221,256,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0278,2026-11-20,13:00,False,
+MSG-10242,257,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0279,2026-11-20,13:00,False,
+MSG-10263,261,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0280,2026-11-20,13:00,False,
+MSG-10244,263,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0281,2026-11-20,14:00,False,
+MSG-10264,264,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0277,2026-11-20,13:00,False,
+MSG-10197,265,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0285,2026-11-20,14:00,False,
+MSG-10273,266,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0282,2026-11-20,14:00,False,
+MSG-10266,270,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0283,2026-11-20,14:00,False,
+MSG-10246,271,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0289,2026-11-20,15:00,False,
+MSG-10267,272,"Wipers, cabin heating, fan, seat, trim, or other comfort feature. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0302,2026-11-21,07:00,False,
+MSG-10275,274,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0304,2026-11-21,08:00,False,
+MSG-10268,275,"Unexpected driving or suspension noise. Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0309,2026-11-21,09:00,False,
+MSG-10271,279,"Screen, account, app, or phone key.",routine,remote_troubleshooting,booked,SLOT-0314,2026-11-21,10:00,False,
+MSG-10279,282,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0284,2026-11-20,14:00,False,
+MSG-10281,284,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0286,2026-11-20,14:00,False,
+MSG-10123,285,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True,
+MSG-10222,286,"Braking or steering mentioned, with limited detail. Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True,
+MSG-10285,290,"Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True,
+MSG-10025,292,"Charging, range, or charge port. Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True,
+MSG-10287,293,"Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True,
+MSG-10288,294,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0287,2026-11-20,15:00,False,
+MSG-10272,295,"Screen, account, app, or phone key.",routine,remote_troubleshooting,awaiting_remote_capacity,,,,True,
+MSG-10291,298,"Unexpected driving or suspension noise. Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0288,2026-11-20,15:00,False,
+MSG-10293,300,"Wipers, cabin heating, fan, seat, trim, or other comfort feature.",routine,routine_service_visit,booked,SLOT-0290,2026-11-20,15:00,False,

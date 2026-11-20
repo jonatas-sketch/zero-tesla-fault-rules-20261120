@@ -87,3 +87,9 @@ The page reads the 300 exercise records with their sanitized technical summaries
 The paste box applies the same safety principles and Pydantic constraints locally, then runs the same booking function against a fresh copy of remaining slots. The test result enters the main queue at its sorted position and is identified as a preview. It does not reserve a published slot or change the 300 original rows.
 
 In the acceptance exercise, MSG-10309 lands at position 106, between the older safety cases and the first `soon` case. Extra pedal travel and grinding while stopping require priority safety inspection. The next unused compatible slot is SLOT-0291, 20 November at 15:00, with escalation because the first day is full. The stage's 18 acceptance cases matched their reviewed safety flags after local checks. These fixtures establish behavior for the exercise.
+
+### Prompt used for the page
+
+> Build streamlit_app.py for the Morning fault queue. Join all 300 tagged messages with service-schedule.csv by message ID. Show a technical summary, urgency tag, fix path, service slot, booking status, and human-review flag for each row. Sort safety urgent, soon, then routine, and use oldest receipt and message ID within each group. Add a paste box that validates the same safety rules, calls book_service_slot on the remaining inventory, and inserts the result into the main sorted queue as a marked test row. Put the code and runnable data in the repo with a README and test a calm brake warning.
+
+The final revision added the Monday escalation count and explicit safety evidence. The test uses a copy of the inventory so the published schedule has no side effects. [Screenshot of MSG-10309 in the safety-urgent group](queue-brake-case.png).

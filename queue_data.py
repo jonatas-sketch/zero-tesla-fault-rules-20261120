@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 from minimize_reports import minimize
+from queue_preview import explain_safety
 from service_schedule import indexed
 from verify_results import read_csv
 
@@ -36,6 +37,9 @@ def prepare_queue(original, schedule):
             "slot_date": item["slot_date"],
             "slot_start_time": item["slot_start_time"],
             "needs_human_review": item["needs_human_review"],
+            "safety_evidence": explain_safety(source[item["message_id"]]["message_text"],
+                                               source[item["message_id"]]["vehicle_alert_code"])
+            if item["urgency_tag"] == "safety_urgent" else "",
         }
         for item in schedule
     ]

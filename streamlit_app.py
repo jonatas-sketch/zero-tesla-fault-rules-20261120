@@ -29,7 +29,6 @@ EXERCISE_EXAMPLE = ("MSG-10309. We had a lovely weekend trip. On the way back th
                     "before the car slowed, and there was faint grinding at a full stop. No rush whenever a slot opens.")
 
 
-@st.cache_data
 def load_data():
     messages = read_csv(ROOT / "queue-messages.csv")
     for row in messages:
@@ -48,6 +47,7 @@ def display_row(row):
         "Fix path": ROUTES[row["fix_path"]],
         "Service slot": slot_text(row),
         "Status": ("Preview · " if row.get("is_preview") else "") + STATUS[row["booking_status"]],
+        "Safety evidence": row["safety_evidence"],
         "Technical summary": row["technical_summary"],
         "Human review": str(row["needs_human_review"]).casefold() == "true",
     }
@@ -76,7 +76,7 @@ def show_preview(messages, availability):
                 st.error(f'{preview["message_id"]} · {level}')
             else:
                 st.info(f'{preview["message_id"]} · {level}')
-            st.caption(preview["technical_summary"])
+            st.caption(preview["safety_evidence"] or preview["technical_summary"])
             st.write(ROUTES[preview["fix_path"]])
             st.write(slot_text(preview))
             st.caption(STATUS[preview["booking_status"]] + " · Test only")
@@ -96,6 +96,8 @@ def main():
     metrics[1].metric("Safety urgent", sum(row["urgency_tag"] == "safety_urgent" for row in messages))
     metrics[2].metric("Reserved slots", sum(bool(row["slot_id"]) for row in messages))
     metrics[3].metric("Awaiting capacity", sum(not row["slot_id"] for row in messages))
+    escalated = sum(row["booking_status"] == "safety_overflow_escalated" for row in messages)
+    st.warning(f"{escalated} safety reports need immediate escalation because Monday's bays are full.")
 
     left, right = st.columns([2.4, 1], gap="large")
     with right:
@@ -111,10 +113,11 @@ def main():
         visible = [display_row(row) for row in rows if (level == "All" or URGENCY[row["urgency_tag"]] == level)
                    and (not search or search in (row["message_id"] + " " + row["technical_summary"]).casefold())]
         if visible:
-            st.dataframe(pd.DataFrame(visible), height=540, hide_index=True, width="stretch",
-                         column_config={"Technical summary": st.column_config.TextColumn(width="large"),
+            st.dataframe(pd.DataFrame(visible), height=min(540, 40 + 35 * len(visible)), hide_index=True, width="stretch",
+                         column_config={"Safety evidence": st.column_config.TextColumn(width="medium"),
+                                        "Technical summary": st.column_config.TextColumn(width="large"),
                                         "Human review": st.column_config.CheckboxColumn()})
-            st.caption(f"{len(visible)} messages shown")
+            st.caption(f"{len(visible)} {'message' if len(visible) == 1 else 'messages'} shown")
         else:
             st.info("No messages match these filters.")
 

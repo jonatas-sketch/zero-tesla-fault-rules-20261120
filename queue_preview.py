@@ -5,7 +5,7 @@ from datetime import date
 
 from fault_urgency_rules import FixPath, FaultUrgencyRule, SAFETY_ALERT_CODES, UrgencyTag
 from minimize_reports import PATTERNS
-from service_schedule import BookingCall, BookingTool, Slot
+from service_schedule import SAFETY_EVIDENCE, BookingCall, BookingTool, Slot
 from verify_results import SAFETY_RECHECK
 
 
@@ -24,6 +24,22 @@ CHARGING = "Charging, range, or charge port."
 VAGUE_SAFETY = "Braking or steering mentioned, with limited detail."
 TRUNCATED = "The report cuts off mid-thought."
 ABS_CUE = "ABS or stability control mentioned."
+
+
+def explain_safety(text, alert_code=""):
+    code = next((code for code in SAFETY_ALERT_CODES if code.casefold() == alert_code.casefold()), "")
+    inline_code = SAFETY_CODE.search(text)
+    if code or inline_code:
+        return "Listed safety alert " + (code or inline_code.group()) + "."
+    local_detail = SAFETY_RECHECK.search(text)
+    if local_detail:
+        return SAFETY_EVIDENCE[local_detail.lastgroup]
+    direct = [cue for cue, pattern in PATTERNS.items() if cue in CONCRETE_SAFETY and pattern.search(text)]
+    if direct:
+        return " ".join(direct)
+    if PATTERNS[ABS_CUE].search(text):
+        return "ABS or stability symptoms were reported."
+    return "Safety tag assigned. Review the underlying report."
 
 
 def label_message(text):
@@ -59,4 +75,5 @@ def preview_report(text, availability, base_ids, first_day):
         **booking,
         "received_rank": len(base_ids) + 1,
         "technical_summary": " ".join(summary) or "No recognizable technical cue.",
+        "safety_evidence": explain_safety(text) if rule.urgency_tag == UrgencyTag.SAFETY_URGENT else "",
     }
