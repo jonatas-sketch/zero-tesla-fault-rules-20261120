@@ -1,0 +1,5 @@
+# Authoring prompt for the exercise
+
+Write moderation policy v1.0 and a separate Gemini classifier prompt using the course guideline extract and the 12 labelled exercises. Compare what makes a clip eligible for allowance or adult-only distribution versus removal. Give each rule a stable ID. Describe the observable violence severity factors and useful in-clip news signals. Preserve contextual exceptions where warranted and state the boundaries that override them. Do not invent a universal duration cutoff.
+
+Add an appendix that maps each of Lena's 12 exercise IDs to the reference action and strongest rule ID, with a short reason. Use the labels as policy-development examples and keep them out of the classifier input and independent test claims. The classifier must return the action, rule ID, evidence interval in seconds, evidence and context summaries, and a human-review flag. Flag missing and ambiguous evidence for reviewer assessment. Do not include original footage or raw source files in the submission. Commit the policy, classifier prompt, example mapping, and this authoring prompt to the exercise branch, then provide the GitHub link.
