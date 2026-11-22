@@ -1,0 +1,15 @@
+{
+  "clip_id": "REAL-GYM-001",
+  "model": "gemini-3.1-flash-lite",
+  "source_kind": "candidate",
+  "status": "validated_recommendation",
+  "finding": {
+    "action": "allow",
+    "rule_id": "NP-01",
+    "evidence_start_seconds": null,
+    "evidence_end_seconds": null,
+    "evidence_summary": "The video shows a gymnast performing a routine in a professional competition setting.",
+    "context_summary": "This is ordinary, supervised sports footage with no graphic injury or prohibited content.",
+    "needs_human_review": false
+  }
+}

@@ -1,5 +1,35 @@
 # Google moderation exercise
 
+## Stage 3 · Upload decision script
+
+`classify_upload.py` makes one structured Gemini request per evidence pack with the v1.0 policy, the prediction prompt, timed JPEGs and word timings. Pydantic checks the output. The script checks the returned interval against the video's duration. Failures go to human review with no automatic action. `requirements-stage3.txt` lists the dependencies. The authoring request appears below.
+
+The reviewer CSV has 12 rows and 14 columns. It supplies decisions and evidence offsets. None of the columns is a source file, media link or dataset identifier, and the in-app manager could not provide a crosswalk. **Zero of twelve benchmark sources are verified.**
+
+### Real-media integration run
+
+**REAL-GYM-001** is a public, 89.025-second recording of an adult gymnast in a supervised competition. It exercises the ordinary-sports allowance path comparable to CLIP-003. It has its own source and ID. It does not validate the reviewer row's original footage or the child-safety false-positive scenario.
+
+Source: [Afanasyeva floor routine Mexican Open 2011](https://commons.wikimedia.org/wiki/File:Afanasyeva_floor_routine_Mexican_Open_2011.webm), by [jimezm](https://www.youtube.com/watch?v=b68viNO93UI), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The unchanged source is kept locally. The derived evidence comprises 45 JPEGs (0–88 seconds, two-second interval) and an empty word sequence (`no_speech_detected`). SHA-256 of the input: `a9b1ce7f759e39e968cc21580f0ceb1c264ddc09fbaf86b274d9cab5546c0b28`.
+
+Gemini 3.1 Flash-Lite returned **allow** with rule **NP-01** and no flagged evidence interval. The JSON output validated. The [saved result](stage3-real-gym-001-result.json) reproduces the response. Three local checks also routed a missing key, invalid response schema, and out-of-bounds interval to human review.
+
+```sh
+uv run --with-requirements requirements-stage2.txt python build_evidence_pack.py \
+  /local/Afanasyeva_floor_routine_Mexican_Open_2011.webm \
+  --id REAL-GYM-001 --source-kind candidate --output /local/evidence-packs
+
+uv run --with-requirements requirements-stage3.txt python classify_upload.py \
+  /local/evidence-packs/REAL-GYM-001/pack.json \
+  --env-file .env --output /local/real-gym-001-decision.json
+```
+
+Set `GEMINI_API_KEY` in the shell, or use a local `.env` containing `GEMINI_API_KEY`. The repository ignores that file. The script also recognizes `GOOGLE_API_KEY`. The request sends derived frames and timed words to Gemini. The branch contains code and a decision JSON. Source media, frames, transcripts and credentials stay local.
+
+### Upload decision script authoring prompt
+
+Write a Python CLI that reads one timestamped evidence pack built in stage 2, the v1.0 policy, and the separate classification prompt. Load the API key from the environment or an optional local env file. Pass frame JPEGs with explicit timestamps and word timings in a single multimodal request. Request structured JSON and validate it with Pydantic. Accept the three decisions and policy rule IDs, require paired evidence bounds in clip seconds for restriction or removal, and reject out-of-range intervals. Include brief evidence and context, a clip ID, model, source type and validation status. Route missing or invalid results to human review without an automatic action. Return the runnable script, dependencies, this run command, and one saved confirmed decision with provenance. Keep the real-media integration example distinct from reviewer cases with unverified source media.
+
 ## Stage 2 · Clip evidence packs
 
 The [single-clip builder](build_evidence_pack.py) samples 0, 2, 4 seconds and onward using FFmpeg. Its `pack.json` carries the clip ID, JSON frame filenames and offsets, duration, source fingerprint, audio status, and word timestamps. The [batch runner](build_verified_packs.py) joins the 12 rows in the original local reviewer CSV to the [source manifest](source-manifest.csv). It only reads a trimmed local video when the match is verified. It checks the reference duration, the chosen source interval and the recorded evidence points. Relative video paths in the manifest resolve from the manifest's folder.
