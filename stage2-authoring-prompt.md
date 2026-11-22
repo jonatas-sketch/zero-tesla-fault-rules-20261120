@@ -1,0 +1,5 @@
+# Evidence-pack build request
+
+Write a repeatable Python CLI to prepare evidence for the 12 reviewer rows. Read the reviewer CSV and a source manifest, join by clip ID, and require one manifest row per ID. For a verified match, require a provenance ID, original source offsets, a local trimmed video, and a note. Check category, news context, reviewer action, policy reference, duration and harm timestamps. Track a video without verified evidence as pending and include the reason in the report.
+
+Use FFmpeg to make a JPEG at zero and each two-second point. Decode the audio onto the matching timeline. Use faster-whisper for word start and end seconds. Store one folder per source clip, with JPEGs and a pack.json containing timed filenames, timed words, source hash, duration and transcript status. Validate bounds and do not invent words or timestamps. Report missing sources and failures. Update the README and test an original benign spoken and silent example without counting them toward the reviewer clips.

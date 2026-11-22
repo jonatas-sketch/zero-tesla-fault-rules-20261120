@@ -1,4 +1,28 @@
-# Video upload moderation — exercise project
+# Google moderation exercise
+
+## Stage 2 · Clip evidence packs
+
+The [single-clip builder](build_evidence_pack.py) samples 0, 2, 4 seconds and onward using FFmpeg. Its `pack.json` carries the clip ID, JSON frame filenames and offsets, duration, source fingerprint, audio status, and word timestamps. The [batch runner](build_verified_packs.py) joins the 12 rows in the original local reviewer CSV to the [source manifest](source-manifest.csv). It only reads a trimmed local video when the match is verified. It checks the reference duration, the chosen source interval and the recorded evidence points. Relative video paths in the manifest resolve from the manifest's folder.
+
+Run locally with Python, FFmpeg, ffprobe and a cached faster-whisper model, for example:
+
+```sh
+uv run --with-requirements requirements-stage2.txt python build_verified_packs.py \
+  '/local/Reviewer-Labelled Clip Set (12 clips).csv' '/local/source-manifest.csv' \
+  --output '/local/evidence-packs' --model base
+```
+
+The command writes a per-row report and exits nonzero if any row is pending or fails. The [run summary](stage2-run-summary.json) shows **0 built and 12 pending** for the reviewer set. The exercise supplies reviewer IDs and labels, with no verified dataset crosswalk. The published XD-Violence annotations label broad events, not these reviewer decisions. The official test-video OneDrive link required sign-in in this check. The pending rows have no local source segment or benchmark pack.
+
+Two synthetic smoke tests exercise real media processing. The spoken test produced five frames at 0, 2, 4, 6 and 8 seconds and 13 timed words. The silent test produced frames at 0, 2 and 4 seconds, with `no_audio_track`. These test cases have distinct IDs and stay outside the reviewer benchmark. Source media and frame and transcript outputs remain local.
+
+### Evidence-pack build request
+
+Write a repeatable Python CLI to prepare evidence for the 12 reviewer rows. Read the reviewer CSV and a source manifest, join by clip ID, and require one manifest row per ID. For a verified match, require a provenance ID, original source offsets, a local trimmed video, and a note. Check category, news context, reviewer action, policy reference, duration and harm timestamps. Track a video without verified evidence as pending and include the reason in the report.
+
+Use FFmpeg to make a JPEG at zero and each two-second point. Decode the audio onto the matching timeline. Use faster-whisper for word start and end seconds. Store one folder per source clip, with JPEGs and a pack.json containing timed filenames, timed words, source hash, duration and transcript status. Validate bounds and do not invent words or timestamps. Report missing sources and failures. Update the README and test an original benign spoken and silent example without counting them toward the reviewer clips.
+
+## Stage 1 · Moderation policy
 
 Stage 1 defines a policy and structured model output for a simulated moderation tool. It separates eligibility for age restriction, removal, and allowance. It also describes when a human reviewer must decide.
 

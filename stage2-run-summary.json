@@ -1,0 +1,97 @@
+{
+  "benchmark": {
+    "built": 0,
+    "pending": 12,
+    "failed": 0,
+    "rows": [
+      {
+        "clip_id": "CLIP-001",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-002",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-003",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-004",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-005",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-006",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-007",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-008",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-009",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-010",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-011",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      },
+      {
+        "clip_id": "CLIP-012",
+        "status": "pending",
+        "reason": "No source segment has been matched and verified against this exercise row."
+      }
+    ]
+  },
+  "smoke_tests": [
+    {
+      "clip_id": "SAMPLE-SILENT",
+      "source_kind": "synthetic_test",
+      "duration_seconds": 5.208333,
+      "frames_seconds": [
+        0,
+        2,
+        4
+      ],
+      "transcript_status": "no_audio_track",
+      "words": 0
+    },
+    {
+      "clip_id": "SAMPLE-SPOKEN",
+      "source_kind": "synthetic_test",
+      "duration_seconds": 8.416667,
+      "frames_seconds": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "transcript_status": "transcribed",
+      "words": 13
+    }
+  ]
+}
