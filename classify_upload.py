@@ -2,6 +2,7 @@
 
 import argparse
 import base64
+from datetime import datetime, timezone
 import json
 import math
 import os
@@ -113,7 +114,9 @@ def request_finding(payload, key, model):
     return "".join(part.get("text", "") for part in candidate["content"]["parts"] if not part.get("thought"))
 
 
-def classify(manifest, key, model):
+def classify(manifest, key, model, trace=None):
+    started = None
+    identifier = None
     try:
         pack = json.loads(manifest.read_text())
         identifier = pack["clip_id"]
@@ -123,34 +126,51 @@ def classify(manifest, key, model):
         if not key:
             raise ValueError("No Gemini API key configured")
         payload = build_payload(manifest, pack, duration)
+        started = datetime.now(timezone.utc)
         finding = Finding.model_validate_json(request_finding(payload, key, model))
         if finding.evidence_end_seconds is not None and finding.evidence_end_seconds > duration:
             raise ValueError("Finding points outside the clip duration")
-        return {
+        result = {
             "clip_id": identifier, "model": model, "source_kind": pack["source_kind"],
             "status": "human_review" if finding.needs_human_review else "validated_recommendation",
             "finding": finding.model_dump(),
         }
     except error.HTTPError as exc:
-        reason = f"Gemini HTTP {exc.code}"
+        result = {"clip_id": identifier, "status": "human_review", "finding": None, "reason": f"Gemini HTTP {exc.code}"}
     except (OSError, KeyError, TypeError, ValueError, IndexError) as exc:
-        reason = type(exc).__name__
-    return {"clip_id": locals().get("identifier"), "status": "human_review", "finding": None, "reason": reason}
+        result = {"clip_id": identifier, "status": "human_review", "finding": None, "reason": type(exc).__name__}
+    if trace and started:
+        try:
+            result["trace_id"] = trace(started, {
+                "clip_id": identifier,
+                "model": model,
+                "source_kind": pack["source_kind"],
+                "duration_seconds": duration,
+                "frame_count": len(pack["frames"]),
+                "word_count": len(pack["words"]),
+            }, result)
+        except Exception as exc:
+            result["trace_error"] = type(exc).__name__
+    return result
 
 
 def main():
+    from trace_langsmith import load_tracer
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("manifest", type=Path)
     parser.add_argument("--env-file", type=Path)
+    parser.add_argument("--langsmith-env-file", type=Path)
     parser.add_argument("--model", default="gemini-3.1-flash-lite")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    result = classify(args.manifest.resolve(), load_key(args.env_file), args.model)
+    trace = load_tracer(args.langsmith_env_file or args.env_file)
+    result = classify(args.manifest.resolve(), load_key(args.env_file), args.model, trace=trace)
     with args.output.open("x", encoding="utf-8") as stream:
         json.dump(result, stream, ensure_ascii=False, indent=2)
         stream.write("\n")
     print(result["status"])
-    return int(result["status"] != "validated_recommendation")
+    return int(result["status"] != "validated_recommendation" or "trace_error" in result)
 
 
 if __name__ == "__main__":
